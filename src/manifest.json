@@ -4,7 +4,7 @@
     "lang": "es-CO",
     "start_url": "/",
     "background_color": "#FFFFFF",
-    "theme_color": "#FFFFFF",
+    "theme_color": "#003140",
     "description": "Portafolio laboral de JuanSDev desarrollador web y de software.",
     "icons": [{
       "src": "assets/icons/72.png",

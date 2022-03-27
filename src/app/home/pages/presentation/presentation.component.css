@@ -1,0 +1,19 @@
+.background-image-full {
+  background-image: url('../../../../assets/img/presentation/presentacion_fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+img.coder_animate {
+    bottom: 21px;
+    right: 225px;
+}
+
+.degradient-black-white {
+    background: -webkit-linear-gradient(left, #000000 50%, #ffffff 50%);
+    background: -o-linear-gradient(left, #000000 50%, #ffffff 50%);
+    background: -moz-linear-gradient(left, #000000 50%, #ffffff 50%);
+    background: linear-gradient(to left, #000000 50%, #ffffff 50%);
+}

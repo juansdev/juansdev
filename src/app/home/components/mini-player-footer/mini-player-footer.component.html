@@ -1,0 +1,54 @@
+<!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
+
+<button type="button" [style]="{'display':music?'none':'block'}" (click)="toggleMusic()" class="m-3 position-fixed bottom-0 start-0 bg-dark text-light btn btn-default btn-circle border border-black border-3 btn-lg p-0" style="z-index: 1;">
+    <i class="fa-solid fa-music align-middle"></i>
+</button>
+
+<div id="app-cover" [style]="{'display':music?'block':'none'}">
+    <div id="player">
+        <div id="player-track">
+            <div id="album-name"></div>
+            <div id="track-name"></div>
+            <div id="track-time">
+                <div id="current-time"></div>
+                <div id="track-length"></div>
+            </div>
+            <div id="s-area">
+                <div id="ins-time"></div>
+                <div id="s-hover"></div>
+                <div id="seek-bar"></div>
+            </div>
+        </div>
+        <div id="player-content">
+            <div id="album-art">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
+                    class="active" id="_1">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+                <div id="buffer-box">Cargando ...</div>
+            </div>
+            <div id="player-controls">
+                <div class="control">
+                    <div class="button" id="play-previous">
+                        <i class="fas fa-backward align-middle"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button" id="play-pause-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button" id="play-next">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                </div>
+                <button id="close-music" class="position-absolute btn btn-default btn-circle p-0 close" style="right: .25%; top: 1%;" (click)="toggleMusic()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

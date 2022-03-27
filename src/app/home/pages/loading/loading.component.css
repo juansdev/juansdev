@@ -1,0 +1,8 @@
+.overlay-fullscreen {
+    z-index: 2000;
+    opacity: .5;
+    background-image: url('../../../../assets/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
