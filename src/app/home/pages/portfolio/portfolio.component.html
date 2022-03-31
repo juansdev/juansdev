@@ -1,0 +1,97 @@
+<section class="section container-fluid degradient-full py-5" id="portfolio">
+    <div class="card text-dark">
+        <div class="card-header px-3">
+            <h1 class="text-light-outline fw-bold fs-1 text-center">
+                {{ 'portfolio.title' | translate }}
+            </h1>
+        </div>
+        <div class="card-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="btn-lg nav-link border border-dark text-dark rounded-0 active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                        role="tab" aria-controls="all" aria-selected="true">
+                        {{ 'portfolio.tabs.all' | translate }}
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="btn-lg nav-link text-dark border border-dark rounded-0" id="desktop-tab" data-bs-toggle="tab" data-bs-target="#desktop" type="button" role="tab" aria-controls="desktop" aria-selected="false">
+                        {{ 'portfolio.tabs.desktop' | translate }}
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="btn-lg nav-link text-dark border border-dark rounded-0" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab" aria-controls="web" aria-selected="false">
+                        {{ 'portfolio.tabs.web' | translate }}
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="btn-lg nav-link text-dark border-dark rounded-0" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button"
+                        role="tab" aria-controls="app" aria-selected="false">
+                        {{ 'portfolio.tabs.app' | translate }}
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content border border-dark">
+                <div class="tab-pane fade show active bg-transparent" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="grid">
+                        <button *ngFor="let item of all['lightbox_items']; let i = index" 
+                        mat-raised-button
+                        (click)="openLightbox(0, all['ids'][i])"
+                        class="grid-item">
+                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                            <span *ngIf="all['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a [href]="all['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                                    {{all['repositories_url'][i]}}
+                                </a>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane fade bg-transparent" id="desktop" role="tabpanel" aria-labelledby="desktop-tab">
+                    <div class="grid">
+                        <button *ngFor="let item of desktop['lightbox_items']; let i = index" 
+                        mat-raised-button
+                        (click)="openLightbox(0, desktop['ids'][i])"
+                        class="grid-item">
+                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                            <span *ngIf="desktop['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a [href]="desktop['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                                    {{desktop['repositories_url'][i]}}
+                                </a>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane fade bg-transparent" id="web" role="tabpanel" aria-labelledby="web-tab">
+                    <div class="grid">
+                        <button *ngFor="let item of web['lightbox_items']; let i = index" 
+                        mat-raised-button
+                        (click)="openLightbox(0, web['ids'][i])"
+                        class="grid-item">
+                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                            <span *ngIf="web['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a [href]="web['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                                    {{web['repositories_url'][i]}}
+                                </a>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane fade bg-transparent" id="app" role="tabpanel" aria-labelledby="app-tab">
+                    <div class="grid">
+                        <button *ngFor="let item of app['lightbox_items']; let i = index" 
+                        mat-raised-button
+                        (click)="openLightbox(0, app['ids'][i])"
+                        class="grid-item">
+                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                            <span *ngIf="app['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a [href]="app['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                                    {{app['repositories_url'][i]}}
+                                </a>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

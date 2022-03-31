@@ -1,9 +1,11 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+
 ::-webkit-scrollbar {
     width: 25px;
 }
 ::-webkit-scrollbar-track {   
     border: 7px solid #232943;
-    box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 2.5px 1px rgba(0,0,0,.5);
     background-color: #003140;
 }
 ::-webkit-scrollbar-thumb {
@@ -15,8 +17,17 @@
     border-radius: 3px;
 }
 
+* {
+    line-height: 20pt;
+}
+
+p {
+    margin: 0 !important;
+}
+
 section.section {
-    padding-left: 6%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .default-background-color {
@@ -29,7 +40,9 @@ section.section {
 
 .text-light-outline {
     color: white;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    letter-spacing: 1pt !important;
+    margin: 5px 0px !important;
 }
 
 .border-black {

@@ -1,13 +1,3 @@
-*:focus {
-  outline: none;
-}
-
-body {
-  font-family: Helvetica, Arial;
-  margin: 0;
-  background-color: #ffeff5;
-}
-
 #app-cover {
   position: fixed;
   bottom: 0;
@@ -16,6 +6,15 @@ body {
   height: 100px;
   margin: -4px auto;
   z-index: 1;
+}
+
+@media (max-width: 575.9px) {
+  #app-cover {
+    display: none !important;
+  }
+  #close-music {
+    display: none !important;
+  }
 }
 
 #player {
@@ -49,11 +48,10 @@ body {
 #track-name {
   color: #acaebd;
   font-size: 13px;
-  margin: 2px 0 13px 0;
 }
 
 #track-time {
-  height: 14px;
+  height: 18px;
   margin-bottom: 3px;
   overflow: hidden;
 }

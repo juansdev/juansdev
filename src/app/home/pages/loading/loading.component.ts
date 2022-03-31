@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-loading',

@@ -1,0 +1,95 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about_me": "About me",
+        "skills": "My skills",
+        "resume": "Resume",
+        "portfolio": "My portfolio",
+        "services": "My services",
+        "contact_me": "Contact me"
+    },
+    "presentation": {
+        "title": "MY PORTFOLIO WEBSITE",
+        "local_time": "Local time",
+        "timer": "Elapsed time in my portfolio",
+        "title_description": "Hi. I am Juan Guillermo",
+        "description": "Web Developer / Software Developer",
+        "show_my_job": "See my work"
+    },
+    "about_me": {
+        "title": "ABOUT ME",
+        "description": "I am a web developer and software developer, a Systems Engineering student at the University of Tolima. Since I was a child I have had a great talent with technology and ease with programming.",
+        "description_2": "I master a wide variety of desktop, frontend and backend development tools, mobile applications, software design and databases.",
+        "contact_me": "Contact me",
+        "cv": "CV"
+    },
+    "skills": {
+        "title": "SOME OF MY QUALITIES AND SKILLS",
+        "description": "Autodidact. Analysis capacity. Teamwork. Customer Support. Responsable. Creative and curious.",
+        "footer": "This section is just a sample, as a developer I consider that the person who has the ability to program, design or style can do it in any language or using any tool, it could take a short time to learn them, but in the end they can turn them into skills."
+    },
+    "resume": {
+        "title": "RESUME",
+        "description": "As a professional I can provide a focus on quality and efficiency in the area of information systems, design, software development and databases."
+    },
+    "portfolio": {
+        "title": "MY PORTFOLIO",
+        "tabs": {
+            "all": "ALL",
+            "desktop": "DESKTOP",
+            "web": "WEB",
+            "app": "APP"
+        }
+    },
+    "services": {
+        "title": "SERVICES",
+        "desktop": {
+            "title": "Desktop Development",
+            "description": "Experience in custom development of software applications, ensuring quality and safety at all times."
+        },
+        "frontend": {
+            "title": "FrontEnd Development",
+            "description": "Solid knowledge in frontend development, which guarantees the optimal solution for each project."
+        },
+        "backend": {
+            "title": "BackEnd Development",
+            "description": "Extensive knowledge of development of stored procedures, Web Services, Apis, sql and nosql databases."
+        },
+        "mobile_apps": {
+            "title": "Mobile Application Development",
+            "description": "When I develop desktop and web applications, at the same time I give them support for a mobile application, be it from the S.O. Android or iOS."
+        },
+        "freenlance": {
+            "title": "Freelance",
+            "description": "I currently work independently, but when I have a full-time job, I can do projects in my spare time depending on the complexity of the project."
+        }
+    },
+    "contact_me": {
+        "send_email": {
+            "title": "Send me an email",
+            "email": "Email",
+            "email_help": "We will never share your email with someone else.",
+            "issuer_name": "Issuer name",
+            "subject": "Subject",
+            "send": "Send"
+        },
+        "social_networks": {
+            "title": "My social networks"
+        },
+        "pop_up": {
+            "success": {
+                "title": "Your email has been sent successfully!",
+                "text": "Thank you for contacting me! In a few hours you will receive an answer.",
+                "confirm_button": "Ok"
+            },
+            "error": {
+                "title": "Your email could not be sent!",
+                "text": "Oops, it looks like an error occurred while trying to send your mail, please try again later.",
+                "confirm_button": "Ok"
+            }
+        }
+    },
+    "footer": {
+        "title": "© Copyright Portfolio JuanSDev. All Rights Reserved."
+    }
+}

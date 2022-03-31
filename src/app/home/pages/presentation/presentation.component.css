@@ -6,14 +6,32 @@
   height: 100vh;
 }
 
-img.coder_animate {
-    bottom: 21px;
-    right: 225px;
-}
-
 .degradient-black-white {
     background: -webkit-linear-gradient(left, #000000 50%, #ffffff 50%);
     background: -o-linear-gradient(left, #000000 50%, #ffffff 50%);
     background: -moz-linear-gradient(left, #000000 50%, #ffffff 50%);
     background: linear-gradient(to left, #000000 50%, #ffffff 50%);
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .presentation-button {
+    padding-left: 13%;
+  }
+}
+
+.icon-translate{
+  position: relative;
+  display: inline-block;
+  background-image: url('../../../../assets/icons/brands/translate.svg'); 
+  width: 15vh; 
+  height: 15vh; 
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
 }

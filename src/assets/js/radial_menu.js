@@ -35,7 +35,7 @@
             }
 
             // Toggle click event
-            $('.circle-nav-toggle, .circle-nav-overlay').on('click', function () {
+            $('.circle-nav-toggle, .circle-nav-overlay').on('click tap', function () {
                 $container.stop().toggleClass('circle-nav-open');
                 $toggle.stop().toggleClass('circle-nav-open');
                 $panel.stop().toggleClass('circle-nav-open');

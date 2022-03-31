@@ -1,34 +1,52 @@
 <section class="section container-fluid py-5" id="contact-me">
     <div class="row">
-        <div class="col">
-            <h3>Enviame un correo electrónico</h3>
-            <form method="post">
-                <div class="mb-3">
-                    <label for="email" class="form-label fw-bold">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
-                    <div id="emailHelp" class="form-text fw-bold">Nosotros nunca compartiremos tu correo electrónico con alguien más.</div>
+        <div class="mb-5 mb-lg-0 col-md-12 col-lg-6">
+            <p>
+                <span class="fw-bold fs-5">
+                    {{ 'contact_me.send_email.title' | translate }}
+                </span>
+            </p>
+            <form (submit)="sendEmail($event)">
+                <div class="mb-3 fs-6">
+                    <label for="email" class="form-label fw-bold">
+                        {{ 'contact_me.send_email.email' | translate }}
+                    </label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="issuer_email" required pattern="^[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$">
+                    <div id="emailHelp" class="form-text fw-bold">
+                        {{ 'contact_me.send_email.email_help' | translate }}
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="issuer_name" class="form-label fw-bold">Nombre del emisor</label>
+                <div class="mb-3 fs-6">
+                    <label for="issuer_name" class="form-label fw-bold" required pattern="[A-zÀ-ÿ ñ]+">
+                        {{ 'contact_me.send_email.issuer_name' | translate }}
+                    </label>
                     <input type="text" class="form-control" id="issuer_name" name="issuer_name">
                 </div>
-                <div class="mb-3">
-                    <label for="subject" class="form-label fw-bold">Asunto</label>
+                <div class="mb-3 fs-6">
+                    <label for="subject" class="form-label fw-bold" required>
+                        {{ 'contact_me.send_email.subject' | translate }}
+                    </label>
                     <input type="text" class="form-control" id="subject" name="subject">
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" rows="5"></textarea>
+                  <textarea class="form-control" rows="5" name="message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-success w-100">Enviar</button>
+                <button type="submit" class="btn btn-success w-100">
+                    {{ 'contact_me.send_email.send' | translate }}
+                </button>
             </form>
         </div>
-        <div class="col">
-            <h3>Mis redes sociales</h3>
+        <div class="col-md-12 col-lg-6">
+            <p>
+                <span class="fw-bold fs-5">
+                    {{ 'contact_me.social_networks.title' | translate }}
+                </span>
+            </p>
             <div class="list-group">
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary">
+                <a href="https://www.facebook.com/juansdev72" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary">
                     <i class="fa-brands fa-facebook fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">Facebook</span>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-info">
+                <a href="https://twitter.com/JuanSDev72" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-info">
                     <i class="fa-brands fa-twitter fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">Twitter</span>
                 </a>
                 <a href="https://www.linkedin.com/in/juan-guillermo-serrano-ram%C3%ADrez-061217181" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary">

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-presentation',
@@ -10,8 +11,12 @@ export class PresentationComponent implements OnInit, OnDestroy {
   public current_time: string;
   public timer: string;
   private interval_id: NodeJS.Timeout;
+  private languageList = [
+    { code: 'es', label: 'Spanish' },
+    { code: 'en', label: 'English' },
+  ];
   
-  constructor() {
+  constructor(private translate: TranslateService) {
     const time = new Date();
     this.current_time = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
     this.timer = '00:00:00';
@@ -41,6 +46,14 @@ export class PresentationComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.interval_id) {
       clearInterval(this.interval_id);
+    }
+  }
+
+  changeSiteLanguage(): void {
+    const currentLanguage = this.translate.currentLang === 'en' ? 'es' : 'en';
+    const selectedLanguage = this.languageList.find((language) => language.code === currentLanguage)?.label.toString();
+    if (selectedLanguage) {
+      this.translate.use(currentLanguage);
     }
   }
 

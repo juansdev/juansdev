@@ -1,37 +1,61 @@
 <section class="section container-fluid degradient-full py-5" id="about-me">
     <div class="row">
-        <div class="col-md-12 col-lg-6 mb-md-3">
+        <div class="col-xl-6 mb-3 mb-xl-0">
             <div class="card text-dark">
                 <div class="card-header px-3">
-                    <h1 class="text-light-outline text-center">ACERCA DE MÍ</h1>
+                    <h1 class="text-light-outline fw-bold fs-1 text-center">
+                        {{ 'about_me.title' | translate }}
+                    </h1>
                 </div>
                 <div class="card-body">
-                    <p class="fs-5">Soy desarrollador web y desarrollador de software, estudiante de la Ingeniería de Sistemas de la Universidad del Tolima. Desde niño he tenido un gran talento con la tecnología y facilidad con la programación.</p>
-                    <p class="fs-5 fst-italic">Domino gran variedad de herramientas de desarrollo desktop, frontend y backend, aplicaciones moviles, diseño de software y de bases de datos.</p>
+                    <p>
+                        <span class="fs-5">
+                            {{ 'about_me.description' | translate }}
+                        </span>
+                    </p>
+                    <p>
+                        <span class="fs-5 fst-italic">
+                            {{ 'about_me.description_2' | translate }}
+                        </span>
+                    </p>
                 </div>
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-6">
-                            <a href="#" class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">CONTACTAME</a>
+                            <a href="#contact-me"
+                                class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">
+                                {{ 'about_me.contact_me' | translate }}
+                            </a>
                         </div>
                         <div class="col-6">
-                            <a href="#" class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">CV</a>
+                            <a href="#resume" class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">
+                                {{ 'about_me.cv' | translate }}
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-12 col-lg-6">
-            <div class="row h-100">
-                <div class="col-4 align-self-end">
-                    <img class="img-fluid" src="assets/img/about_me/master_web_full_stack.jpg" alt="Certificado Master Full Stack" srcset="">
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid" src="assets/img/about_me/desarrollador_python.jpg" alt="Certificado Desarrollador de Python" srcset="">
-                </div>
-                <div class="col-4 align-self-end">
-                    <img class="img-fluid" src="assets/img/about_me/diplomado.jpg" alt="Diplomado Desarrollo Web" srcset="">
-                </div>
+        <div class="d-xl-none col-12">
+            <div class="grid h-100">
+                <button *ngFor="let item of items; let i = index" 
+                mat-raised-button
+                class="grid-item">
+                    <span class="grid-image" 
+                    [lightbox]="i" 
+                    style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                </button>
+            </div>
+        </div>
+        <div class="d-none d-xl-block col-xl-6">
+            <div class="grid h-100">
+                <button *ngFor="let item of items; let i = index" 
+                mat-raised-button
+                class="grid-item">
+                    <span class="grid-image" 
+                    [lightbox]="i" 
+                    style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
+                </button>
             </div>
         </div>
     </div>
