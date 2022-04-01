@@ -38,9 +38,7 @@
         </div>
         <div class="d-xl-none col-12">
             <div class="grid h-100">
-                <button *ngFor="let item of items; let i = index" 
-                mat-raised-button
-                class="grid-item">
+                <button *ngFor="let item of items; let i = index" class="grid-item">
                     <span class="grid-image" 
                     [lightbox]="i" 
                     style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
@@ -49,9 +47,7 @@
         </div>
         <div class="d-none d-xl-block col-xl-6">
             <div class="grid h-100">
-                <button *ngFor="let item of items; let i = index" 
-                mat-raised-button
-                class="grid-item">
+                <button *ngFor="let item of items; let i = index" class="grid-item">
                     <span class="grid-image" 
                     [lightbox]="i" 
                     style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>

@@ -4,8 +4,6 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { GalleryModule } from  'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,8 +46,6 @@ import { environment } from '../environments/environment';
     GalleryModule,
     LightboxModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatGridListModule,
     NgxTranslateModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

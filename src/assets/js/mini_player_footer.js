@@ -44,7 +44,7 @@ $(function () {
       "Jordan Schor - Home",
       "Martin Garrix - Proxy"
     ],
-    albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
+    albumArtworks = ["1", "2", "3", "4", "5"],
     trackUrl = [
       "assets/music/2.mp3",
       "assets/music/1.mp3",
