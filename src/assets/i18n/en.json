@@ -71,6 +71,7 @@
             "email_help": "We will never share your email with someone else.",
             "issuer_name": "Issuer name",
             "subject": "Subject",
+            "message": "Message",
             "send": "Send"
         },
         "social_networks": {
@@ -91,5 +92,15 @@
     },
     "footer": {
         "title": "© Copyright Portfolio JuanSDev. All Rights Reserved."
+    },
+    "mini_player_footer": {
+        "buffer_box": "Loading...",
+        "image_alt": {
+            "id_1": "Artistic image of the song 1",
+            "id_2": "Artistic image of the song 2",
+            "id_3": "Artistic image of the song 3",
+            "id_4": "Artistic image of the song 4",
+            "id_5": "Artistic image of the song 5"
+        }
     }
 }

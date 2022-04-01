@@ -71,6 +71,7 @@
             "email_help": "Nosotros nunca compartiremos tu correo electrónico con alguien más.",
             "issuer_name": "Nombre del emisor",
             "subject": "Asunto",
+            "message": "Mensaje",
             "send": "Enviar"
         },
         "social_networks": {
@@ -91,5 +92,15 @@
     },
     "footer": {
         "title": "© Copyright Portafolio JuanSDev. Todos los derechos reservados."
+    },
+    "mini_player_footer": {
+        "buffer_box": "Cargando...",
+        "image_alt": {
+            "id_1": "Imagen artistica de la canción 1",
+            "id_2": "Imagen artistica de la canción 2",
+            "id_3": "Imagen artistica de la canción 3",
+            "id_4": "Imagen artistica de la canción 4",
+            "id_5": "Imagen artistica de la canción 5"
+        }
     }
 }

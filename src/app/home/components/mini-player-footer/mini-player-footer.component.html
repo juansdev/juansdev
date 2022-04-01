@@ -1,6 +1,6 @@
 <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks. -->
 
-<button type="button" id="close-music" [style]="{'display':music?'none':'block'}" (click)="toggleMusic()" class="m-3 position-fixed bottom-0 start-0 bg-dark text-light btn btn-default btn-circle border border-black border-3 btn-lg p-0" style="z-index: 1;">
+<button type="button" [style]="{'display':music?'none':'block'}" (click)="toggleMusic()" class="m-3 position-fixed bottom-0 start-0 bg-dark text-light btn btn-default btn-circle border border-black border-3 btn-lg p-0" style="z-index: 1;">
     <i class="fa-solid fa-music align-middle"></i>
 </button>
 
@@ -21,13 +21,13 @@
         </div>
         <div id="player-content">
             <div id="album-art">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg"
-                    class="active" id="_1">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-                <div id="buffer-box">Cargando ...</div>
+                <img src="assets/img/mini_player_footer/_1.webp"
+                    class="active" id="_1" alt="{{ 'mini_player_footer.image_alt.id_1' | translate }}">
+                <img src="assets/img/mini_player_footer/_2.webp" id="_2" alt="{{ 'mini_player_footer.image_alt.id_2' | translate }}">
+                <img src="assets/img/mini_player_footer/_3.webp" id="_3" alt="{{ 'mini_player_footer.image_alt.id_3' | translate }}">
+                <img src="assets/img/mini_player_footer/_4.webp" id="_4" alt="{{ 'mini_player_footer.image_alt.id_4' | translate }}">
+                <img src="assets/img/mini_player_footer/_5.webp" id="_5" alt="{{ 'mini_player_footer.image_alt.id_5' | translate }}">
+                <div id="buffer-box">{{ 'mini_player_footer.buffer_box' | translate }}</div>
             </div>
             <div id="player-controls">
                 <div class="control">

@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-presentation',
   templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.css']
+  styleUrls: ['./presentation.component.min.css']
 })
 export class PresentationComponent implements OnInit, OnDestroy {
 

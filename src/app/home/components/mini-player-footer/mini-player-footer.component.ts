@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mini-player-footer',
   templateUrl: './mini-player-footer.component.html',
-  styleUrls: ['./mini-player-footer.component.css']
+  styleUrls: ['./mini-player-footer.component.min.css']
 })
 export class MiniPlayerFooterComponent {
 

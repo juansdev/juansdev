@@ -63,11 +63,26 @@
 $(function(){
     $('#circle-nav-wrapper').circleNav();
     $('[data-bs-toggle="tooltip"]').tooltip();
+    var open_menu = false;
+    $('#circle-nav-toggle').on('click tap', function(){
+        $('#circle-nav-wrapper').toggleClass(function(index, old_class, state) {
+            open_menu = !open_menu;
+            return 'd-none';
+        });
+    });
+    var scroll_top = true;
     $(window).on("scroll",function() {
-        if ($(this).scrollTop() > 60) {
-            $('#circle-nav-wrapper').css('display', 'block');
-        } else {
-            $('#circle-nav-wrapper').css('display', 'none');
+        if ($(this).scrollTop() <= 60 && !scroll_top) {
+            $('#circle-nav-toggle').toggleClass('d-none');
+            $('#circle-nav-wrapper').removeClass('d-none');
+            $('#circle-nav-wrapper').addClass('d-none');
+            scroll_top = true;
+        } else if($(this).scrollTop() > 60 && scroll_top) {
+            scroll_top = false;
+            $('#circle-nav-toggle').toggleClass('d-none');
+            if(open_menu) {
+                $('#circle-nav-wrapper').toggleClass('d-none');
+            }
         }
     });
 });

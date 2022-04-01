@@ -224,17 +224,17 @@
   transition: 0.1s linear all;
 }
 
-#album-art.buffering img {
+.buffering img {
   opacity: 0.25;
 }
 
-#album-art.buffering img.active {
+.buffering img.active {
   opacity: 0.8;
-  filter: blur(2px);
   -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 
-#album-art.buffering #buffer-box {
+.buffering #buffer-box {
   opacity: 1;
 }
 
@@ -262,6 +262,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease all;
 }
 
 .button i {
@@ -270,10 +271,6 @@
   font-size: 26px;
   text-align: center;
   line-height: 1;
-}
-
-.button,
-.button i {
   transition: 0.2s ease all;
 }
 

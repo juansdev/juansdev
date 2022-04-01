@@ -3,7 +3,7 @@ import { AfterContentInit, Component } from '@angular/core';
 @Component({
   selector: 'app-loading',
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.css']
+  styleUrls: ['./loading.component.min.css']
 })
 export class LoadingComponent implements AfterContentInit {
 

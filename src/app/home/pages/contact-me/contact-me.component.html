@@ -11,25 +11,29 @@
                     <label for="email" class="form-label fw-bold">
                         {{ 'contact_me.send_email.email' | translate }}
                     </label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="issuer_email" required pattern="^[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$">
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="issuer_email"
+                        required pattern="^[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,4}$">
                     <div id="emailHelp" class="form-text fw-bold">
                         {{ 'contact_me.send_email.email_help' | translate }}
                     </div>
                 </div>
                 <div class="mb-3 fs-6">
-                    <label for="issuer_name" class="form-label fw-bold" required pattern="[A-zÀ-ÿ ñ]+">
+                    <label for="issuer_name" class="form-label fw-bold">
                         {{ 'contact_me.send_email.issuer_name' | translate }}
                     </label>
-                    <input type="text" class="form-control" id="issuer_name" name="issuer_name">
+                    <input type="text" class="form-control" id="issuer_name" name="issuer_name" required pattern="[A-zÀ-ÿ ñ]+">
                 </div>
                 <div class="mb-3 fs-6">
-                    <label for="subject" class="form-label fw-bold" required>
+                    <label for="subject" class="form-label fw-bold">
                         {{ 'contact_me.send_email.subject' | translate }}
                     </label>
-                    <input type="text" class="form-control" id="subject" name="subject">
+                    <input type="text" class="form-control" id="subject" name="subject" required>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" rows="5" name="message" required></textarea>
+                    <label for="message" class="form-label fw-bold">
+                        {{ 'contact_me.send_email.message' | translate }}
+                    </label>
+                    <textarea class="form-control" id="message" rows="5" name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-success w-100">
                     {{ 'contact_me.send_email.send' | translate }}
@@ -43,20 +47,26 @@
                 </span>
             </p>
             <div class="list-group">
-                <a href="https://www.facebook.com/juansdev72" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary">
-                    <i class="fa-brands fa-facebook fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">Facebook</span>
+                <a href="https://www.facebook.com/juansdev72" target="_blank" rel="noopener noreferrer"
+                    class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary fw-bold fs-5">
+                    <i class="fa-brands fa-facebook fs-3 me-3"></i> Facebook
                 </a>
-                <a href="https://twitter.com/JuanSDev72" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-info">
-                    <i class="fa-brands fa-twitter fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">Twitter</span>
+                <a href="https://twitter.com/JuanSDev72" target="_blank" rel="noopener noreferrer"
+                    class="ps-4 py-3 list-group-item list-group-item-action list-group-item-info fw-bold fs-5">
+                    <i class="fa-brands fa-twitter fs-3 me-3"></i> Twitter
                 </a>
-                <a href="https://www.linkedin.com/in/juan-guillermo-serrano-ram%C3%ADrez-061217181" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary">
-                    <i class="fa-brands fa-linkedin fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/juan-guillermo-serrano-ram%C3%ADrez-061217181" target="_blank"
+                    rel="noopener noreferrer"
+                    class="ps-4 py-3 list-group-item list-group-item-action list-group-item-primary fw-bold fs-5">
+                    <i class="fa-brands fa-linkedin fs-3 me-3"></i> LinkedIn
                 </a>
-                <a href="https://github.com/juansdev" target="_blank" rel="noopener noreferrer" class="ps-4 py-3 list-group-item list-group-item-action list-group-item-dark">
-                    <i class="fa-brands fa-github fs-3 align-middle"></i> <span class="fw-bold fs-5 ms-3 align-middle">GitHub</span>
+                <a href="https://github.com/juansdev" target="_blank" rel="noopener noreferrer"
+                    class="ps-4 py-3 list-group-item list-group-item-action list-group-item-dark fw-bold fs-5">
+                    <i class="fa-brands fa-github fs-3 me-3"></i> GitHub
                 </a>
-              </div>
-              <img class="img-thumbnail" src="assets/img/services/programmer.gif" alt="Programador animado" srcset="">
+            </div>
+            <video playsinline autoplay muted loop class="video img-thumbnail"
+                src="assets/video/contact_me/programmer.mp4"></video>
         </div>
     </div>
 </section>

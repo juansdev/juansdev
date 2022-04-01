@@ -33,62 +33,86 @@
             <div class="tab-content border border-dark">
                 <div class="tab-pane fade show active bg-transparent" id="all" role="tabpanel" aria-labelledby="all-tab">
                     <div class="grid">
-                        <button *ngFor="let item of all['lightbox_items']; let i = index" 
-                        mat-raised-button
-                        (click)="openLightbox(0, all['ids'][i])"
-                        class="grid-item">
-                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
-                            <span *ngIf="all['repositories_url'][i]" class="fw-bold item-text-bottom">
-                                <a [href]="all['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                        <div *ngFor="let item of all['lightbox_items']; let i = index" class="position-relative" style="
+                        margin: 1em;">
+                            <button 
+                            mat-raised-button
+                            (click)="openLightbox(0, all['ids'][i])"
+                            class="grid-item grid-image"
+                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);">
+                            </button>
+                            <span 
+                            *ngIf="all['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a 
+                                [href]="all['repositories_url'][i]" target="_blank" 
+                                rel="noopener noreferrer">
                                     {{all['repositories_url'][i]}}
                                 </a>
                             </span>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade bg-transparent" id="desktop" role="tabpanel" aria-labelledby="desktop-tab">
                     <div class="grid">
-                        <button *ngFor="let item of desktop['lightbox_items']; let i = index" 
-                        mat-raised-button
-                        (click)="openLightbox(0, desktop['ids'][i])"
-                        class="grid-item">
-                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
-                            <span *ngIf="desktop['repositories_url'][i]" class="fw-bold item-text-bottom">
-                                <a [href]="desktop['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                        <div *ngFor="let item of desktop['lightbox_items']; let i = index" class="position-relative" style="
+                        margin: 1em;">
+                            <button 
+                            mat-raised-button
+                            (click)="openLightbox(0, desktop['ids'][i])"
+                            class="grid-item grid-image"
+                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);">
+                            </button>
+                            <span 
+                            *ngIf="desktop['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a 
+                                [href]="desktop['repositories_url'][i]" target="_blank" 
+                                rel="noopener noreferrer">
                                     {{desktop['repositories_url'][i]}}
                                 </a>
                             </span>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade bg-transparent" id="web" role="tabpanel" aria-labelledby="web-tab">
                     <div class="grid">
-                        <button *ngFor="let item of web['lightbox_items']; let i = index" 
-                        mat-raised-button
-                        (click)="openLightbox(0, web['ids'][i])"
-                        class="grid-item">
-                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
-                            <span *ngIf="web['repositories_url'][i]" class="fw-bold item-text-bottom">
-                                <a [href]="web['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                        <div *ngFor="let item of web['lightbox_items']; let i = index" class="position-relative" style="
+                        margin: 1em;">
+                            <button 
+                            mat-raised-button
+                            (click)="openLightbox(0, web['ids'][i])"
+                            class="grid-item grid-image"
+                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);">
+                            </button>
+                            <span 
+                            *ngIf="web['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a 
+                                [href]="web['repositories_url'][i]" target="_blank" 
+                                rel="noopener noreferrer">
                                     {{web['repositories_url'][i]}}
                                 </a>
                             </span>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade bg-transparent" id="app" role="tabpanel" aria-labelledby="app-tab">
                     <div class="grid">
-                        <button *ngFor="let item of app['lightbox_items']; let i = index" 
-                        mat-raised-button
-                        (click)="openLightbox(0, app['ids'][i])"
-                        class="grid-item">
-                            <span class="grid-image" style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
-                            <span *ngIf="app['repositories_url'][i]" class="fw-bold item-text-bottom">
-                                <a [href]="app['repositories_url'][i]" target="_blank" rel="noopener noreferrer">
+                        <div *ngFor="let item of app['lightbox_items']; let i = index" class="position-relative" style="
+                        margin: 1em;">
+                            <button 
+                            mat-raised-button
+                            (click)="openLightbox(0, app['ids'][i])"
+                            class="grid-item grid-image"
+                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);">
+                            </button>
+                            <span 
+                            *ngIf="app['repositories_url'][i]" class="fw-bold item-text-bottom">
+                                <a 
+                                [href]="app['repositories_url'][i]" target="_blank" 
+                                rel="noopener noreferrer">
                                     {{app['repositories_url'][i]}}
                                 </a>
                             </span>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>

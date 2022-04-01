@@ -1,5 +1,5 @@
 .background-image-full {
-  background-image: url('../../../../assets/img/presentation/presentacion_fondo.png');
+  background-image: url('../../../../assets/img/presentation/presentacion_fondo.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -34,4 +34,14 @@
   cursor: pointer;
   background-size: cover;
   background-position: center center;
+}
+
+.float-icon-translate {
+  background-image: url('../../../../assets/icons/brands/translate.svg'); 
+  width: 5vh; 
+  height: 5vh; 
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
 }

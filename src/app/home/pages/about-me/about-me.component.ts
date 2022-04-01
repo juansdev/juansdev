@@ -5,7 +5,7 @@ import { Lightbox } from 'ng-gallery/lightbox';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  styleUrls: ['./about-me.component.min.css']
 })
 export class AboutMeComponent implements OnInit {
 
@@ -15,7 +15,7 @@ export class AboutMeComponent implements OnInit {
     public gallery: Gallery,
     public lightbox: Lightbox) {
     const path_portfolio = 'assets/img/about_me/';
-    const extension = '.jpg';
+    const extension = '.webp';
     const all_images = ['master_web_full_stack', 'desarrollador_python', 'diplomado'];
     for (let index = 0; index < all_images.length; index++) {
       const image = all_images[index];
