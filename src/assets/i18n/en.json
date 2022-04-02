@@ -14,7 +14,8 @@
         "timer": "Elapsed time in my portfolio",
         "title_description": "Hi. I am Juan Guillermo",
         "description": "Web Developer / Software Developer",
-        "show_my_job": "See my work"
+        "show_my_job": "See my work",
+        "change_language": "Cambiar a español"
     },
     "about_me": {
         "title": "ABOUT ME",

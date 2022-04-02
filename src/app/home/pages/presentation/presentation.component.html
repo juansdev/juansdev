@@ -25,25 +25,21 @@
             </div>
             <div class="mt-5 d-flex flex-wrap align-items-center" style="gap: 15px 0px;">
                 <a href="https://www.facebook.com/juansdev72" target="_blank" rel="noopener noreferrer"
-                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3">
-                    <span class="d-none">Facebook</span>
-                    <i class="fa-brands fa-facebook align-middle"></i>
+                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3 d-flex justify-content-center align-items-center">
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="https://twitter.com/JuanSDev72" target="_blank" rel="noopener noreferrer"
-                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3">
-                    <span class="d-none">Twitter</span>
-                    <i class="fa-brands fa-twitter align-middle"></i>
+                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3 d-flex justify-content-center align-items-center">
+                    <i class="fa-brands fa-twitter"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/juan-guillermo-serrano-ram%C3%ADrez-061217181" target="_blank"
                     rel="noopener noreferrer"
-                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3">
-                    <span class="d-none">LinkedIn</span>
-                    <i class="fa-brands fa-linkedin align-middle"></i>
+                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 me-3 d-flex justify-content-center align-items-center">
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/juansdev" target="_blank" rel="noopener noreferrer"
-                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3">
-                    <span class="d-none">GitHub</span>
-                    <i class="fa-brands fa-github align-middle"></i>
+                    class="text-center bg-dark text-light btn btn-default btn-circle btn-xl fs-2 border border-black border-3 d-flex justify-content-center align-items-center">
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </div>
         </div>
@@ -51,7 +47,7 @@
             <div (click)="changeSiteLanguage()" class="icon-translate position-relative">
                 <div class="position-absolute text-center top-50 w-100">
                     <p class="rounded" style="background-color: rgba(0,0,0,.7);">
-                        <span class="text-light fw-bold">Cambiar idioma</span>
+                        <span class="text-light fw-bold">{{ 'presentation.change_language' | translate }}</span>
                     </p>
                 </div>
             </div>

@@ -230,11 +230,8 @@ export class PortfolioComponent {
     }
     for (let index = 0; index < videos_url.length; index++) {
       const video_url = videos_url[index];
-      galleryRef.addVideo({
-        src: [{
-          url: 'https://drive.google.com/uc?export=download&id='+video_url,
-          type: 'video/mp4'
-        }],
+      galleryRef.addIframe({
+        src: 'https://drive.google.com/file/d/'+video_url+'/preview',
         thumb: 'https://drive.google.com/thumbnail?id='+video_url
       });
     }

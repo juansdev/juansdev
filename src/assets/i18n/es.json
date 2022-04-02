@@ -14,7 +14,8 @@
         "timer": "Tiempo transcurrido en mi portafolio",
         "title_description": "Hola. Yo soy Juan Guillermo",
         "description": "Desarrollador Web / Desarrollador de Software",
-        "show_my_job": "Ver mi trabajo"
+        "show_my_job": "Ver mi trabajo",
+        "change_language": "Switch to english"
     },
     "about_me": {
         "title": "ACERCA DE MÍ",
