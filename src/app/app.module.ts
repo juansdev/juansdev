@@ -13,7 +13,7 @@ import { AboutMeComponent } from './home/pages/about-me/about-me.component';
 import { ContactMeComponent } from './home/pages/contact-me/contact-me.component';
 import { SkillsComponent } from './home/pages/skills/skills.component';
 import { PortfolioComponent } from './home/pages/portfolio/portfolio.component';
-import { ResumeComponent } from './home/pages/resume/resume.component';
+import { SummaryComponent } from './home/pages/summary/summary.component';
 import { PresentationComponent } from './home/pages/presentation/presentation.component';
 import { RadialMenuComponent } from './home/components/radial-menu/radial-menu.component';
 import { ServicesComponent } from './home/pages/services/services.component';
@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
     ContactMeComponent,
     SkillsComponent,
     PortfolioComponent,
-    ResumeComponent,
+    SummaryComponent,
     PresentationComponent,
     RadialMenuComponent,
     ServicesComponent,
