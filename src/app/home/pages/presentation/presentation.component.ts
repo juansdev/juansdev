@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PresentationComponent implements OnInit, OnDestroy {
 
+  @Output() language_selected = new EventEmitter<string>();
   public current_time: string;
   public timer: string;
   private interval_id: NodeJS.Timeout;
@@ -54,6 +55,7 @@ export class PresentationComponent implements OnInit, OnDestroy {
     const selectedLanguage = this.languageList.find((language) => language.code === currentLanguage)?.label.toString();
     if (selectedLanguage) {
       this.translate.use(currentLanguage);
+      this.language_selected.emit(currentLanguage);
     }
   }
 

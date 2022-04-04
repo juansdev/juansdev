@@ -5,10 +5,10 @@
 <app-mini-player-footer></app-mini-player-footer>
 <!-- Static -->
 <app-header></app-header>
-<app-presentation></app-presentation>
+<app-presentation (language_selected)="onLanguageSelected($event)"></app-presentation>
 <app-about-me></app-about-me>
 <app-skills></app-skills>
-<app-summary></app-summary>
+<app-summary [language_selected]="language_selected"></app-summary>
 <app-portfolio></app-portfolio>
 <app-services></app-services>
 <app-contact-me></app-contact-me>

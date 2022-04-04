@@ -6,7 +6,10 @@
         "summary": "Summary",
         "portfolio": "My portfolio",
         "services": "My services",
-        "contact_me": "Contact me"
+        "contact_me": "Contact me",
+        "aria_label": {
+            "toggle": "Toggle navigation"
+        }
     },
     "presentation": {
         "title": "MY PORTFOLIO WEBSITE",
@@ -31,7 +34,9 @@
     },
     "summary": {
         "title": "SUMMARY",
-        "description": "As a professional I can provide a focus on quality and efficiency in the area of information systems, design, software development and databases."
+        "description": "As a professional I can provide a focus on quality and efficiency in the area of information systems, design, software development and databases.",
+        "download_cv": "Download CV",
+        "cv_pdf": "cv_english"
     },
     "portfolio": {
         "title": "MY PORTFOLIO",
@@ -103,5 +108,12 @@
             "id_4": "Artistic image of the song 4",
             "id_5": "Artistic image of the song 5"
         }
+    },
+    "radial_menu": {
+        "item_1": "About me",
+        "item_2": "My skills",
+        "item_3": "Summary",
+        "item_4": "My portfolio",
+        "item_5": "My services"
     }
 }

@@ -6,7 +6,10 @@
         "summary": "Resumen",
         "portfolio": "Mi portafolio",
         "services": "Mis servicios",
-        "contact_me": "Contactame"
+        "contact_me": "Contactame",
+        "aria_label": {
+            "toggle": "Navegación de palanca"
+        }
     },
     "presentation": {
         "title": "MI PORTAFOLIO WEB",
@@ -31,7 +34,9 @@
     },
     "summary": {
         "title": "RESUMEN",
-        "description": "Como profesionista puedo aportar un enfoque de calidad y eficacia en el área de sistemas de información, diseño, desarrollo de software y base de datos."
+        "description": "Como profesionista puedo aportar un enfoque de calidad y eficacia en el área de sistemas de información, diseño, desarrollo de software y base de datos.",
+        "download_cv": "Descargar CV",
+        "cv_pdf": "cv_spanish"
     },
     "portfolio": {
         "title": "MI PORTAFOLIO",
@@ -103,5 +108,12 @@
             "id_4": "Imagen artistica de la canción 4",
             "id_5": "Imagen artistica de la canción 5"
         }
+    },
+    "radial_menu": {
+        "item_1": "Acerca de mi",
+        "item_2": "Mis habilidades",
+        "item_3": "Resumen",
+        "item_4": "Mi portafolio",
+        "item_5": "Mis servicios"
     }
 }

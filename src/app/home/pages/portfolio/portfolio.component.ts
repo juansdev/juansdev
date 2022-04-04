@@ -242,6 +242,11 @@ export class PortfolioComponent {
     return lightbox_item;
   }
 
+  getFileName(url: string): string {
+    const filename = url.replace(/^.*[\\\/]/, '').replace('.webp', '').split('_').join(' ');
+    return filename.charAt(0).toUpperCase() + filename.slice(1);
+  }
+
   openLightbox(index: number, id: string) {
     this.lightbox.open(0, id);
   }

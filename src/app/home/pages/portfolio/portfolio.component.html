@@ -1,7 +1,7 @@
 <section class="section container-fluid degradient-full py-5" id="portfolio">
     <div class="card text-dark">
         <div class="card-header px-3">
-            <h1 class="text-light-outline fw-bold fs-1 text-center">
+            <h1 class="title fw-bold fs-1 text-center">
                 {{ 'portfolio.title' | translate }}
             </h1>
         </div>
@@ -38,7 +38,8 @@
                             <button 
                             (click)="openLightbox(0, all['ids'][i])"
                             class="grid-item grid-image"
-                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);">
+                            style="background-image: url(&quot;{{item.data.thumb}}&quot;);"
+                            [attr.aria-label]="getFileName(item.data.thumb)">
                             </button>
                             <span 
                             *ngIf="all['repositories_url'][i]" class="fw-bold item-text-bottom">

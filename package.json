@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "explore": "source-map-explorer dist/**/*.js",
-    "http_server": "http-server -g -c-1 dist/gh-pages"
+    "pwa": "ng build --source-map && gulp compress && http-server -g -c-1 dist/gh-pages"
   },
   "private": true,
   "dependencies": {

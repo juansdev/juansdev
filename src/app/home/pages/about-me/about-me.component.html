@@ -3,7 +3,7 @@
         <div class="col-xl-6 mb-3 mb-xl-0">
             <div class="card text-dark">
                 <div class="card-header px-3">
-                    <h1 class="text-light-outline fw-bold fs-1 text-center">
+                    <h1 class="title fw-bold fs-1 text-center">
                         {{ 'about_me.title' | translate }}
                     </h1>
                 </div>
@@ -38,7 +38,9 @@
         </div>
         <div class="d-xl-none col-12">
             <div class="grid h-100">
-                <button *ngFor="let item of items; let i = index" class="grid-item">
+                <button *ngFor="let item of items; let i = index" 
+                class="grid-item"
+                [attr.aria-label]="getFileName(item.data.thumb)">
                     <span class="grid-image" 
                     [lightbox]="i" 
                     style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>

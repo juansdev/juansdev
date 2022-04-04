@@ -40,4 +40,9 @@ export class AboutMeComponent implements OnInit {
     .load(this.items);
   }
 
+  getFileName(url: string): string {
+    const filename = url.replace(/^.*[\\\/]/, '').replace('.webp', '').split('_').join(' ');
+    return filename.charAt(0).toUpperCase() + filename.slice(1);
+  }
+
 }
