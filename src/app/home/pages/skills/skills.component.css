@@ -1,3 +1,35 @@
 .degradient-full {
     background: linear-gradient(to bottom, #005d7a 0%, #009ecf 100%);
 }
+
+.js {
+    filter: invert(91%) sepia(85%) saturate(1392%) hue-rotate(338deg) brightness(102%) contrast(94%);
+}
+
+.php {
+    filter: invert(55%) sepia(9%) saturate(1676%) hue-rotate(198deg) brightness(88%) contrast(90%);
+}
+
+.python {
+    filter: invert(47%) sepia(11%) saturate(2923%) hue-rotate(166deg) brightness(85%) contrast(84%);
+}
+
+.bootstrap {
+    filter: invert(39%) sepia(16%) saturate(2083%) hue-rotate(222deg) brightness(91%) contrast(91%);
+}
+
+.angular {
+    filter: invert(16%) sepia(98%) saturate(6442%) hue-rotate(341deg) brightness(84%) contrast(107%);
+}
+
+.react {
+    filter: invert(73%) sepia(76%) saturate(461%) hue-rotate(161deg) brightness(96%) contrast(105%);
+}
+
+.node-js {
+    filter: invert(48%) sepia(19%) saturate(1554%) hue-rotate(70deg) brightness(98%) contrast(92%);
+}
+
+.laravel {
+    filter: invert(37%) sepia(71%) saturate(6035%) hue-rotate(347deg) brightness(101%) contrast(107%);
+}
