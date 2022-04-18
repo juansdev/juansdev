@@ -1,11 +1,7 @@
-# Hola, mi nombre es Juan Guillermo Serrano Ramírez
-### Desarrollador Web Full-stack y de Software
-
-![Banner](https://user-images.githubusercontent.com/15238761/160012562-0405c74f-e5bd-443b-a6cf-5b85c61a3f49.png)
-
-Desarrollador de Software/Web, Autodidacta. Entusiasta de la programación. Con la capacidad de desarrollar software para ordenadores y aplicaciones móviles, desarrollar sitios web del lado del Backend y Frontend, así como en la creación de base de datos SQL y NoSQL.
+![Banner Mi Perfil](https://user-images.githubusercontent.com/15238761/163835277-54b72138-16c1-461a-8935-b7f950434e1b.png)
 
 ## Habilidades
+![Banner GitHub](https://user-images.githubusercontent.com/15238761/163836519-6a0c3378-55f4-4300-b01d-40ab52494d7d.png)
 #### Lenguajes de programación:
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)]()
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=101010)]()
@@ -30,10 +26,8 @@ Desarrollador de Software/Web, Autodidacta. Entusiasta de la programación. Con 
 [![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white&labelColor=101010)]()
 
 ## Encuentrame en:
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-JuanSDev-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/JuanSDev/)
 [![Web](https://img.shields.io/badge/Mi_Portafolio-juansdev.github.io/juansdev/-14a1f0?style=for-the-badge&logo=dev.to&logoColor=white&labelColor=101010)](https://juansdev.github.io/juansdev/)
 
 ## Contactame:
-
 [![Email](https://img.shields.io/badge/juansdev72@gmail.com-Mi_correo_laboral-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:juansdev@gmail.com)
