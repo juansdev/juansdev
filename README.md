@@ -1,4 +1,4 @@
-![Banner Mi Perfil](https://user-images.githubusercontent.com/15238761/163835277-54b72138-16c1-461a-8935-b7f950434e1b.png)
+![Banner - Mi Perfil](https://user-images.githubusercontent.com/15238761/164998971-5d980763-302e-42e6-945d-30bd9f0e6a04.png)
 
 ## Habilidades
 ![Banner GitHub](https://user-images.githubusercontent.com/15238761/163836519-6a0c3378-55f4-4300-b01d-40ab52494d7d.png)
