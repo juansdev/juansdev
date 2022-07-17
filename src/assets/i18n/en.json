@@ -3,7 +3,6 @@
         "home": "Home",
         "about_me": "About me",
         "skills": "My skills",
-        "summary": "Summary",
         "portfolio": "My portfolio",
         "services": "My services",
         "contact_me": "Contact me",
@@ -31,12 +30,6 @@
         "title": "SOME OF MY QUALITIES AND SKILLS",
         "description": "Autodidact. Analysis capacity. Teamwork. Customer Support. Responsable. Creative and curious.",
         "footer": "This section is just a sample, as a developer I consider that the person who has the ability to program, design or style can do it in any language or using any tool, it could take a short time to learn them, but in the end they can turn them into skills."
-    },
-    "summary": {
-        "title": "SUMMARY",
-        "description": "As a professional I can provide a focus on quality and efficiency in the area of information systems, design, software development and databases.",
-        "download_cv": "Download CV",
-        "cv_pdf": "cv_english"
     },
     "portfolio": {
         "title": "MY PORTFOLIO",
@@ -112,7 +105,6 @@
     "radial_menu": {
         "item_1": "About me",
         "item_2": "My skills",
-        "item_3": "Summary",
         "item_4": "My portfolio",
         "item_5": "My services"
     }

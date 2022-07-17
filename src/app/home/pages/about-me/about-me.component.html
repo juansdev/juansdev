@@ -20,29 +20,20 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="row">
-                        <div class="col-6">
-                            <a href="#contact-me"
-                                class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">
-                                {{ 'about_me.contact_me' | translate }}
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="#summary" class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">
-                                {{ 'about_me.cv' | translate }}
-                            </a>
-                        </div>
-                    </div>
+                  <a href="#contact-me"
+                      class="btn btn-primary w-100 rounded-0 border border-dark fw-bold">
+                      {{ 'about_me.contact_me' | translate }}
+                  </a>
                 </div>
             </div>
         </div>
         <div class="d-xl-none col-12">
             <div class="grid h-100">
-                <button *ngFor="let item of items; let i = index" 
+                <button *ngFor="let item of items; let i = index"
                 class="grid-item"
                 [attr.aria-label]="getFileName(item.data.thumb)">
-                    <span class="grid-image" 
-                    [lightbox]="i" 
+                    <span class="grid-image"
+                    [lightbox]="i"
                     style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
                 </button>
             </div>
@@ -50,8 +41,8 @@
         <div class="d-none d-xl-block col-xl-6">
             <div class="grid h-100">
                 <button *ngFor="let item of items; let i = index" class="grid-item">
-                    <span class="grid-image" 
-                    [lightbox]="i" 
+                    <span class="grid-image"
+                    [lightbox]="i"
                     style="background-image: url(&quot;{{item.data.thumb}}&quot;);"></span>
                 </button>
             </div>

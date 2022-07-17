@@ -3,7 +3,6 @@
         "home": "Inicio",
         "about_me": "Acerca de mi",
         "skills": "Mis habilidades",
-        "summary": "Resumen",
         "portfolio": "Mi portafolio",
         "services": "Mis servicios",
         "contact_me": "Contactame",
@@ -31,12 +30,6 @@
         "title": "ALGUNAS DE MIS CUALIDADES Y HABILIDADES",
         "description": "Autodidacta. Capacidad de análisis. Trabajo en equipo. Atención al cliente. Responsable. Creativo y curioso.",
         "footer": "Esta sección es solo una muestra, como desarrollador considero que la persona que tiene la habilidad de programar, diseñar o estilizar lo puede hacer en cualquier lenguaje o usando cualquier herramienta, podría llevarle un corto tiempo aprenderlas, pero al final las puede convertir en competencias."
-    },
-    "summary": {
-        "title": "RESUMEN",
-        "description": "Como profesionista puedo aportar un enfoque de calidad y eficacia en el área de sistemas de información, diseño, desarrollo de software y base de datos.",
-        "download_cv": "Descargar CV",
-        "cv_pdf": "cv_spanish"
     },
     "portfolio": {
         "title": "MI PORTAFOLIO",
@@ -112,7 +105,6 @@
     "radial_menu": {
         "item_1": "Acerca de mi",
         "item_2": "Mis habilidades",
-        "item_3": "Resumen",
         "item_4": "Mi portafolio",
         "item_5": "Mis servicios"
     }

@@ -125,6 +125,7 @@
   },
   "defaultProject": "GH-PAGES",
   "cli": {
+    "analytics": "299e580a-0730-491d-bf9c-f2a6b59b6bbd",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }

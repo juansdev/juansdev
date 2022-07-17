@@ -16,19 +16,19 @@ export class AboutMeComponent implements OnInit {
     public lightbox: Lightbox) {
     const path_portfolio = 'assets/img/about_me/';
     const extension = '.webp';
-    const all_images = ['master_web_full_stack', 'desarrollador_python', 'diplomado'];
+    const all_images = ['cientifico_de_datos', 'ingenieria_de_sistemas', 'master_web_full_stack', 'desarrollador_python', 'diplomado'];
     for (let index = 0; index < all_images.length; index++) {
       const image = all_images[index];
       all_images[index] = path_portfolio+image+extension;
       this.items.push(
         new ImageItem({
-          src: all_images[index], 
+          src: all_images[index],
           thumb: all_images[index]
         })
       );
     }
   }
-  
+
   ngOnInit(): void {
     const config: GalleryConfig = {
       autoPlay: true,

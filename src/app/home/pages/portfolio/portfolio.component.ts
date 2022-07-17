@@ -119,6 +119,19 @@ export class PortfolioComponent {
         },
         "repository_url": "https://github.com/juansdev/foro"
       },
+      "proyecto-caps": {
+        "categories": ['web'],
+        "main_image": {
+          'web' : "proyecto-caps"
+        },
+        "images": {
+          'web': []
+        },
+        "videos_url": {
+          'web': ['1ANokDlpYzVXtFgIP1TcS7UhGIBD56JSK']
+        },
+        "repository_url": "https://github.com/juansdev/secop"
+      },
       "registra-tu-libro": {
         "categories": ['web'],
         "main_image": {
@@ -181,13 +194,13 @@ export class PortfolioComponent {
           this.desktop['ids'].push(key_by_category);
           this.desktop['lightbox_items'].push(this.getImagesByCategory(all_images, 'desktop', key));
           this.desktop['repositories_url'].push(repository['repository_url']);
-        } 
+        }
         if(categories.includes('web')) {
           const key_by_category = key+'-'+'web';
           this.web['ids'].push(key_by_category);
           this.web['lightbox_items'].push(this.getImagesByCategory(all_images, 'web', key));
           this.web['repositories_url'].push(repository['repository_url']);
-        } 
+        }
         if(categories.includes('app')) {
           const key_by_category = key+'-'+'app';
           this.app['ids'].push(key_by_category);
@@ -216,8 +229,8 @@ export class PortfolioComponent {
     const path_portfolio = 'assets/img/portfolio/';
     const extension = '.webp';
     const url_main_img = path_portfolio+folder_image+'/'+main_image+extension;
-    galleryRef.addImage({ 
-      src: url_main_img, 
+    galleryRef.addImage({
+      src: url_main_img,
       thumb: url_main_img
     });
     for (let index = 0; index < images.length; index++) {
@@ -236,7 +249,7 @@ export class PortfolioComponent {
       });
     }
     const lightbox_item = new ImageItem({
-      src: url_main_img, 
+      src: url_main_img,
       thumb: url_main_img
     });
     return lightbox_item;
