@@ -21,8 +21,8 @@
     },
     "about_me": {
         "title": "ABOUT ME",
-        "description": "I am a web developer and software developer, a Systems Engineering student at the University of Tolima. Since I was a child I have had a great talent with technology and ease with programming.",
-        "description_2": "I master a wide variety of desktop, frontend and backend development tools, mobile applications, software design and databases.",
+        "description": "Systems Engineer with experience in FullStack Development and Web Design, with tools such as Angular, React, Laravel, Express.js, DJango and Photoshop, as well as the development of database models in MySQL and MongoDB. Experience in cross-platform Software Development through Kivy and Python. Remarkable creative skills, constant learning and teamwork.",
+        "description_2": "I am motivated by the development of web or software projects with high quality and security standards, to promote the growth and impact of applications through digital marketing strategies and technological development in companies seeking greater visibility in the current market.",
         "contact_me": "Contact me",
         "cv": "CV"
     },

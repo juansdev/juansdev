@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658021263044,
+  "timestamp": 1659488735366,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -125,8 +125,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/i18n/en.json": "8fd38d09f7fa5f634f7f2730e863d8fd8bbfa336",
-    "/assets/i18n/es.json": "58f5399276b2924dd043a8e719c78b41cb8ed1e6",
+    "/assets/i18n/en.json": "399bf58720bd8c3cd33aca3b09492f96a32ff8e4",
+    "/assets/i18n/es.json": "f10c1bc71f026e345337b3454464a01a2e9864df",
     "/assets/icons/brands/angular.svg": "d4aaf71821d3fc6a630e93fc77e15a64e8cb416f",
     "/assets/icons/brands/bootstrap.svg": "3f81602117a7004d25bfb9c11d5fa11d8d935217",
     "/assets/icons/brands/django.svg": "a143ef600ee1e63276c19d0f3555ec94dc3c223f",
@@ -157,7 +157,7 @@
     "/assets/icons/icon-72x72.png": "3f58ec48ba391727c5d2b599f959be89699aa91a",
     "/assets/icons/icon-76x76.png": "d0b162385c8b9d969824f1933702ecca080f1406",
     "/assets/icons/icon-96x96.png": "28ffaf7f2fb00a2565f8c26a9dbd473516dcd343",
-    "/assets/img/about_me/cientifico_de_datos.webp": "dfc192556cc566f71cb03318c6daff966038167f",
+    "/assets/img/about_me/cientifico_de_datos.webp": "d5871ffabba7c965669728be310fba4e110d0f53",
     "/assets/img/about_me/desarrollador_python.webp": "58c11e8b77a717ed2c7578c704e231d716d316cc",
     "/assets/img/about_me/diplomado.webp": "f525e478f736c93e0a9bb45f21fe1c67748145db",
     "/assets/img/about_me/ingenieria_de_sistemas.webp": "e16497f439ce55e091dc236b0bf7918219a6472e",
