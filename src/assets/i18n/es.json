@@ -21,8 +21,8 @@
     },
     "about_me": {
         "title": "ACERCA DE MÍ",
-        "description": "Soy desarrollador web y desarrollador de software, estudiante de la Ingeniería de Sistemas de la Universidad del Tolima. Desde niño he tenido un gran talento con la tecnología y facilidad con la programación.",
-        "description_2": "Domino gran variedad de herramientas de desarrollo desktop, frontend y backend, aplicaciones moviles, diseño de software y de bases de datos.",
+        "description": "Ingeniero de Sistemas con experiencia en Desarrollo FullStack y Diseño Web, con herramientas como Angular, React, Laravel, Express.js, DJango y Photoshop, así como el desarrollo de modelos de bases de datos en MySQL y MongoDB. Experiencia en Desarrollo de Software multiplataforma por medio de Kivy y Python. Notables competencias creativas, de aprendizaje constante y de trabajo en equipo.",
+        "description_2": "Me motiva el desarrollo de proyectos web o de software con altos estándares de calidad y de seguridad, para impulsar el crecimiento y el impacto de las aplicaciones a través de estrategias de marketing digital y desarrollo tecnológico en empresas que busquen mayor visibilidad en el mercado actual.",
         "contact_me": "Contactame",
         "cv": "CV"
     },
