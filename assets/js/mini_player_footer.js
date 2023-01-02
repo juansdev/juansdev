@@ -1,5 +1,5 @@
 $(function () {
-  var closeMusic = $("#close-music"),
+  let closeMusic = $("#close-music"),
     playerTrack = $("#player-track"),
     bgArtwork = $("#bg-artwork"),
     bgArtworkUrl,
@@ -97,12 +97,12 @@ $(function () {
     if (isNaN(ctMinutes) || isNaN(ctSeconds)) insTime.text("--:--");
     else insTime.text(ctMinutes + ":" + ctSeconds);
 
-    insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
+    insTime.css({left: seekT, "margin-left": "-21px"}).fadeIn(0);
   }
 
   function hideHover() {
     sHover.width(0);
-    insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
+    insTime.text("00:00").css({left: "0px", "margin-left": "0px"}).fadeOut(0);
   }
 
   function playFromClickedPos() {
@@ -151,7 +151,7 @@ $(function () {
 
     seekBar.width(playProgress + "%");
 
-    if (playProgress == 100) {
+    if (playProgress === 100) {
       i.attr("class", "fa fa-play");
       seekBar.width(0);
       tProgress.text("00:00");
@@ -163,7 +163,7 @@ $(function () {
   function checkBuffering() {
     clearInterval(buffInterval);
     buffInterval = setInterval(function () {
-      if (nTime == 0 || bTime - nTime > 1000) albumArt.addClass("buffering");
+      if (nTime === 0 || bTime - nTime > 1000) albumArt.addClass("buffering");
       else albumArt.removeClass("buffering");
 
       bTime = new Date();
@@ -172,11 +172,14 @@ $(function () {
   }
 
   function selectTrack(flag) {
-    if (flag == 0 || flag == 1) ++currIndex;
+    if (flag === 0 || flag === 1) ++currIndex;
     else --currIndex;
 
+    let currAlbum;
+    let currTrackName;
+    let currArtwork;
     if (currIndex > -1 && currIndex < albumArtworks.length) {
-      if (flag == 0) i.attr("class", "fa fa-play");
+      if (flag === 0) i.attr("class", "fa fa-play");
       else {
         albumArt.removeClass("buffering");
         i.attr("class", "fa fa-pause");
@@ -197,7 +200,7 @@ $(function () {
       bTime = new Date();
       bTime = bTime.getTime();
 
-      if (flag != 0) {
+      if (flag !== 0) {
         audio.play();
         playerTrack.addClass("active");
         albumArt.addClass("active");
@@ -209,26 +212,27 @@ $(function () {
       albumName.text(currAlbum);
       trackName.text(currTrackName);
       albumArt.find("img.active").removeClass("active");
-      $("#" + currArtwork).addClass("active");
+      const elementArtwork =  $("#" + currArtwork);
+      elementArtwork.addClass("active");
 
-      bgArtworkUrl = $("#" + currArtwork).attr("src");
+      bgArtworkUrl = elementArtwork.attr("src");
 
-      bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
+      bgArtwork.css({"background-image": "url(" + bgArtworkUrl + ")"});
     } else {
-      if (flag == 0 || flag == 1) --currIndex;
+      if (flag === 0 || flag === 1) --currIndex;
       else ++currIndex;
     }
   }
 
   function initPlayer() {
-    audio = new Audio();
+    let audio = new Audio();
 
     selectTrack(0);
 
     audio.loop = false;
 
     playPauseButton.on("click", playPause);
-    closeMusic.on('click', function() {
+    closeMusic.on('click', function () {
       playerTrack.removeClass("active");
       albumArt.removeClass("active");
       clearInterval(buffInterval);
