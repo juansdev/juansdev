@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Gallery, GalleryConfig, GalleryItem, ImageItem } from 'ng-gallery';
-import { Lightbox } from 'ng-gallery/lightbox';
 
 @Component({
   selector: 'app-about-me',
@@ -12,8 +11,7 @@ export class AboutMeComponent implements OnInit {
   public items: GalleryItem[] = [];
 
   constructor(
-    public gallery: Gallery,
-    public lightbox: Lightbox) {
+    public gallery: Gallery) {
     const path_portfolio = 'assets/img/about_me/';
     const extension = '.webp';
     const all_images = ['cientifico_de_datos', 'ingenieria_de_sistemas', 'master_web_full_stack', 'desarrollador_python', 'diplomado'];

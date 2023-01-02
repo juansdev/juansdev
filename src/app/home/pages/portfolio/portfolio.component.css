@@ -12,7 +12,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.9px) {
+@media (min-width: 768px) and (max-width: 992px) {
     .portfolio-image {
         flex-basis: 60%;
     }
@@ -35,7 +35,6 @@
 }
 
 .grid-image {
-    display: block;
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;

@@ -6,7 +6,6 @@
     width: 225px;
     height: 225px;
     overflow: hidden;
-    z-index: 1;
 }
 
 .circle-nav-toggle {
@@ -30,7 +29,6 @@
     height: 30px;
     border: 2px solid #191919;
     transition: -webkit-transform .2s cubic-bezier(0, 1.16, 1, 1);
-    transition: transform .2s cubic-bezier(0, 1.16, 1, 1);
     transition: transform .2s cubic-bezier(0, 1.16, 1, 1), -webkit-transform .2s cubic-bezier(0, 1.16, 1, 1);
     background-color: #fff;
     right: 10px;
@@ -98,8 +96,6 @@ i.icons {
     width: 15px;
     height: 15px;
     visibility: hidden;
-    transition: bottom .5s cubic-bezier(0, 1.16, 1, 1), left .5s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), -webkit-transform 1s cubic-bezier(0, 1.16, 1, 1);
-    transition: bottom .5s cubic-bezier(0, 1.16, 1, 1), left .5s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), transform 1s cubic-bezier(0, 1.16, 1, 1);
     transition: bottom .5s cubic-bezier(0, 1.16, 1, 1), left .5s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), transform 1s cubic-bezier(0, 1.16, 1, 1), -webkit-transform 1s cubic-bezier(0, 1.16, 1, 1);
 }
 
@@ -119,8 +115,6 @@ i.icons {
     width: 40px;
     height: 40px;
     visibility: visible;
-    transition: bottom .3s cubic-bezier(0, 1.16, 1, 1), left .3s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), -webkit-transform .8s cubic-bezier(0, 1.16, 1, 1);
-    transition: bottom .3s cubic-bezier(0, 1.16, 1, 1), left .3s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), transform .8s cubic-bezier(0, 1.16, 1, 1);
     transition: bottom .3s cubic-bezier(0, 1.16, 1, 1), left .3s cubic-bezier(0, 1.16, 1, 1), width .5s cubic-bezier(0, 1.16, 1, 1), height .5s cubic-bezier(0, 1.16, 1, 1), transform .8s cubic-bezier(0, 1.16, 1, 1), -webkit-transform .8s cubic-bezier(0, 1.16, 1, 1);
 }
 

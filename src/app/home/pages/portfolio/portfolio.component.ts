@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
-import { Lightbox } from 'ng-gallery/lightbox';
+import {Component} from '@angular/core';
+import {Gallery, GalleryItem, ImageItem} from 'ng-gallery';
+import {Lightbox} from 'ng-gallery/lightbox';
 
 interface AllImages {
   [name:string]: {
@@ -248,11 +248,10 @@ export class PortfolioComponent {
         thumb: 'https://drive.google.com/thumbnail?id='+video_url
       });
     }
-    const lightbox_item = new ImageItem({
+    return new ImageItem({
       src: url_main_img,
       thumb: url_main_img
     });
-    return lightbox_item;
   }
 
   getFileName(url: string): string {

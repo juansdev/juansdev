@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import emailjs, { EmailJSResponseStatus, init } from '@emailjs/browser';
+import emailjs, { init } from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import { TranslateService } from '@ngx-translate/core';
 
@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ContactMeComponent implements OnInit {
 
-  private user_id: string;
+  private readonly user_id: string;
   private service_id: string;
   private template_id: string;
 
@@ -35,27 +35,27 @@ export class ContactMeComponent implements OnInit {
     this.translate.get('contact_me.pop_up.success').subscribe((success) => {
       success_title = success.title;
       success_text = success.text;
-      success_confirm_button = success.confirm_button;
+      success_confirm_button = success['confirm_button'];
     });
     this.translate.get('contact_me.pop_up.error').subscribe((error) => {
       error_title = error.title;
       error_text = error.text;
-      errro_confirm_button = error.confirm_button;
+      errro_confirm_button = error['confirm_button'];
     });
     emailjs.sendForm(this.service_id, this.template_id, e.target as HTMLFormElement, this.user_id)
-      .then((result: EmailJSResponseStatus) => {
-        Swal.fire({
+      .then(async () => {
+        await Swal.fire({
           title: success_title,
           text: success_text,
           icon: "success",
           confirmButtonText: success_confirm_button
         })
-      }, (error) => {
-        Swal.fire({
-            title: error_title,
-            text: error_text,
-            icon: "error",
-            confirmButtonText: errro_confirm_button
+      }, async (error) => {
+        await Swal.fire({
+          title: error_title,
+          text: error_text,
+          icon: "error",
+          confirmButtonText: errro_confirm_button
         });
         console.log(error);
       });

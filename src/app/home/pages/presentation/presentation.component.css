@@ -19,7 +19,7 @@
   }
 }
 
-@media (max-width: 767.9px) {
+@media (max-width: 768px) {
   .presentation-button {
     padding-left: 13%;
   }
@@ -28,18 +28,18 @@
 .icon-translate{
   position: relative;
   display: inline-block;
-  background-image: url('../../../../assets/icons/brands/translate.svg'); 
-  width: 15vh; 
-  height: 15vh; 
+  background-image: url('../../../../assets/icons/brands/translate.svg');
+  width: 15vh;
+  height: 15vh;
   cursor: pointer;
   background-size: cover;
   background-position: center center;
 }
 
 .float-icon-translate {
-  background-image: url('../../../../assets/icons/brands/translate.svg'); 
-  width: 5vh; 
-  height: 5vh; 
+  background-image: url('../../../../assets/icons/brands/translate.svg');
+  width: 5vh;
+  height: 5vh;
   cursor: pointer;
   background-size: cover;
   background-position: center center;

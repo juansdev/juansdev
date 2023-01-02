@@ -13,7 +13,7 @@ export class MiniPlayerFooterComponent {
   }
 
   toggleMusic(){
-    this.music = this.music ? false : true;
+    this.music = !this.music;
   }
 
 }
