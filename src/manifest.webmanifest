@@ -4,15 +4,15 @@
   "theme_color": "#003140",
   "background_color": "#FFFFFF",
   "display": "standalone",
+  "id": "start_url",
   "start_url": "./",
   "scope": "./",
   "lang": "es-CO",
-  "description": "Portafolio laboral de JuanSDev desarrollador web y de software.",
+  "description": "Desarrollador de páginas web FullStack y de software. Programador web. Amplio conocimientos en las tecnologías de vanguardia. UX/UI.",
   "icons": [{
     "src": "assets/icons/icon-72x72.png",
     "sizes": "72x72",
-    "type": "image/png",
-    "purpose": "any maskable"
+    "type": "image/png"
   },{
     "src": "assets/icons/icon-76x76.png",
     "sizes": "76x76",
@@ -46,6 +46,11 @@
     "sizes": "192x192",
     "type": "image/png"
   },{
+    "src": "assets/icons/icon-196x196.png",
+    "sizes": "196x196",
+    "type": "image/png",
+    "purpose": "maskable"
+   },{
     "src": "assets/icons/icon-228x228.png",
     "sizes": "228x228",
     "type": "image/png"
