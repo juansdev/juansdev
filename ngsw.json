@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1672629657161,
+  "timestamp": 1676736589605,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -128,8 +128,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/i18n/en.json": "787b3a7b10431875c1b2d7364478e1c162d1588f",
-    "/assets/i18n/es.json": "67a67051622e2e114187eb930159f5106661408e",
+    "/assets/i18n/en.json": "eea603628c656a3956bf6f913b02eee55341dd8e",
+    "/assets/i18n/es.json": "1dfc4eb21188b7f8eddd9bccb6ba0ac5d8940d8a",
     "/assets/icons/brands/angular.svg": "d4aaf71821d3fc6a630e93fc77e15a64e8cb416f",
     "/assets/icons/brands/bootstrap.svg": "3f81602117a7004d25bfb9c11d5fa11d8d935217",
     "/assets/icons/brands/django.svg": "a143ef600ee1e63276c19d0f3555ec94dc3c223f",

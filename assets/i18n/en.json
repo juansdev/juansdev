@@ -21,8 +21,8 @@
     },
     "about_me": {
         "title": "ABOUT ME",
-        "description": "Systems Engineer with experience in FullStack Development, using the tools Angular, React, Laravel, Express.js, Vue.js and DJango, as well as the development of database models in MySQL and MongoDB. I have experience in cross-platform Software Development through Kivy, Python and Ionic. Remarkable creative skills, constant learning and teamwork.",
-        "description_2": "I am motivated by the development of web or software projects with high quality and security standards, to promote the growth and impact of applications through digital marketing strategies and technological development in companies seeking greater visibility in the current market.",
+        "description": "Systems Engineer with experience in FullStack Development, using the tools Angular, React, Laravel, Express.js, Vue.js and DJango, as well as the development of database models in MySQL and MongoDB. I have experience in cross-platform Software Development through Kivy, Python and Ionic, as well as agile software development methodologies such as SCRUM. Outstanding creative skills, constant learning and teamwork.",
+        "description_2": "I am motivated by the development of web or software projects with high quality and security standards, to boost the growth and impact of applications through an exceptional user experience and cutting-edge technological development, in companies that seek effective solutions. and/or greater visibility in the current market.",
         "contact_me": "Contact me",
         "cv": "CV"
     },
