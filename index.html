@@ -1,61 +1,209 @@
-<!DOCTYPE html><html lang="es-CO"><head>
-  <meta charset="utf-8">
-  <base href="./">
+<!DOCTYPE html>
+<html lang="en">
 
-  <!-- Responsive -->
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Farmi - Organic Farm Agriculture Template">
 
-  <!-- Browser Icons - Multi-platform -->
-  <!-- Ipad Mini or first generations con iOS 6 o inferior -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-72x72.png" type="image/png" sizes="72X72">
-  <!-- Ipad Mini or first generations with iOS 7 o higher -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-76x76.png" type="image/png" sizes="76X76">
-  <!-- Google TV -->
-  <link rel="icon" href="assets/icons/icon-96x96.png" type="image/png" sizes="96X96">
-  <!-- Iphone with iOS 6 or lower -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-114x114.png" type="image/png" sizes="114X114">
-  <!-- Iphone with iOS 7 or higher -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-120x120.png" type="image/png" sizes="120X120">
-  <!-- Standard Devices -->
-  <link rel="icon" href="assets/icons/icon-128x128.png" type="image/png" sizes="128X128">
-  <!-- Ipad with iOS 6 or lower -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-144x144.png" type="image/png" sizes="144X144">
-  <!-- Ipad with iOS 7 or higher -->
-  <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" type="image/png" sizes="152X152">
-  <!-- 192X192 -->
-  <link rel="icon" href="assets/icons/icon-192x192.png" type="image/png" sizes="192X192">
-  <!-- Opera Coast -->
-  <link rel="icon" href="assets/icons/icon-228x228.png" type="image/png" sizes="228X228">
-  <!-- 384X384 -->
-  <link rel="icon" href="assets/icons/icon-384x384.png" type="image/png" sizes="384X384">
-  <!-- 512X512 -->
-  <link rel="icon" href="assets/icons/icon-512x512.png" type="image/png" sizes="512X512">
+    <!-- ========== Page Title ========== -->
+    <title>Farmi - Organic Farm Agriculture Template</title>
 
-  <!-- Metadatos para el buscador -->
-  <title>Portafolio Desarrollador Web - Juan Guillermo Serrano Ramírez</title>
-  <meta name="description" content="Desarrollador de páginas web FullStack y de software. Programador web. Amplio conocimientos en las tecnologías de vanguardia. UX/UI.">
-  <meta name="keywords" content="Desarrollador, web, Front-End, Back-End, FullStack, UX, UI, Interfaz, usuario, programador, freelancer, webmaster, desarrollo">
-  <meta name="author" content="Juan Guillermo Serrano Ramirez - Desarrollador web">
-  <meta name="copyright" content="Juan Guillermo Serrano Ramirez">
-  <meta name="robots" content="index,follow">
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-  <!-- Styles and Manifest -->
-  <meta name="theme-color" content="#003140">
-  <link rel="manifest" href="manifest.webmanifest">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="assets/css/flaticon-set.css" rel="stylesheet"/>
+    <link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet"/>
+    <link href="assets/css/animate.css" rel="stylesheet"/>
+    <link href="assets/css/bootsnav.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet">
+    <!-- ========== End Stylesheet ========== -->
 
-  <!-- Open Graph - Presentacion cuando se comparte mi Pagina Web -->
-  <meta property="”og:type”" content="website">
-  <meta property="”og:title”" content="Portafolio Desarrollador Web - Juan Guillermo Serrano Ramírez">
-  <meta property="”og:description”" content="Desarrollador de páginas web FullStack y de software. Programador web. Amplio conocimientos en las tecnologías de vanguardia. UX/UI.">
-  <meta property="”og:image”" content="assets/img/og/og_image.png">
-  <meta property="”og:url”" content="https://juansdev.github.io/juansdev/">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:33,37,41;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff}*,:after,:before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}:root{--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(fa-brands-400.859fc3887485de84.woff2) format("woff2"),url(fa-brands-400.7fa789ab57acb632.ttf) format("truetype")}:root{--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(fa-regular-400.2ffd018f0eda6f7b.woff2) format("woff2"),url(fa-regular-400.da02cb7e372f16a2.ttf) format("truetype")}:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(fa-solid-900.40ddefd79fe7af45.woff2) format("woff2"),url(fa-solid-900.3a463ec33b4fe9f7.ttf) format("truetype")}*{line-height:20pt}</style><link rel="stylesheet" href="styles.9bd670bb4bee9ff9.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.9bd670bb4bee9ff9.css"></noscript></head>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5/html5shiv.min.js"></script>
+    <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
 
-<body>
-<app-root></app-root>
-<noscript>Por favor habilita JavaScript para continuar usando esta aplicación.</noscript>
-<script src="runtime.df60f2c5d0d9cc59.js" type="module"></script><script src="polyfills.913dc531d2b902d8.js" type="module"></script><script src="scripts.b6e91b94225d29ff.js" defer></script><script src="main.9282e84543904ca2.js" type="module"></script>
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+
+    <script type="text/javascript"
+            src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HDmnHnTNMjTYOgS-hD4B8ibtoecmvjRxiWrwBuByCeZn_iSR4VlKWSXZA488rsqLU2M8z8SjDh0yrwgrs8OgG-QGKlSergoRFMpB5WsLedQ"
+            charset="UTF-8"></script>
+</head>
+
+<body class="demo">
+
+<!-- Header
+============================================= -->
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default transparent navbar-fixed navbar-transparent white bootsnav">
+
+        <div class="container">
 
 
-</body></html>
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-light.png" class="logo logo-display" alt="Logo">
+                    <img src="assets/img/logo.png" class="logo logo-scrolled" alt="Logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li>
+                        <a class="smooth-menu" href="#demo">Demo</a>
+                    </li>
+
+                    <li>
+                        <a href="mailto: validtheme@gmail.com">Support</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+
+<!-- Start Banner
+============================================= -->
+<div class="banner-area demo-banner text-center bg-fixed text-light bg-gradient-green">
+    <div class="box-table">
+        <div class="box-cell">
+            <div class="container demo-banner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content wow fadeInDown">
+                            <h1>Organic Farm Agriculture <br> <span>Template</span></h1>
+                            <a class="btn circle btn-light effect btn-md smooth-menu" href="#demo"> Awesome Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fun-fact-box">
+                    <div class="fun-fact">
+                        <div class="timer" data-to="687" data-speed="5000">12+</div>
+                        <span class="medium">Unique Home</span>
+                    </div>
+                    <div class="fun-fact">
+                        <div class="timer" data-to="2348" data-speed="5000">30+</div>
+                        <span class="medium">Pages</span>
+                    </div>
+                    <div class="fun-fact">
+                        <div class="timer" data-to="2348" data-speed="5000">RTL</div>
+                        <span class="medium">Supported</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Banner -->
+
+<!-- Start Demo
+============================================= -->
+<div id="demo" class="demo-area demo-conten default-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 site-heading text-center">
+                <h2>3 Unique Demo Home Pages</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 item equal-height">
+                <div class="single-item wow fadeInUp">
+                    <img src="assets/img/demo/index-1.jpg" alt="Demo">
+                    <div class="info">
+                        <h4>Home Version One</h4>
+                        <a href="index-1.html">Preview</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 item equal-height">
+                <div class="single-item wow fadeInUp">
+                    <a target="_blank" href="index-3.html">
+                        <img src="assets/img/demo/index-3.jpg" alt="Demo">
+                    </a>
+                    <div class="info">
+                        <h4>Home Version Three</h4>
+                        <a href="index-3.html">Preview</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 item equal-height">
+                <div class="single-item wow fadeInUp">
+                    <a target="_blank" href="index-2.html">
+                        <img src="assets/img/demo/index-2.jpg" alt="Demo">
+                    </a>
+                    <div class="info">
+                        <h4>Home Version Two</h4>
+                        <a href="index-2.html">Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Demo -->
+
+<!-- Start Footer
+============================================= -->
+<footer class="text-light demo default-padding centered bg-dark text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="logo">
+                    <img src="assets/img/logo-light.png" alt="Logo">
+                </div>
+                <div class="copyright">
+                    <p>&copy; Copyright 2022. Farmi Template By <a target="_blank"
+                                                                   href="htts://themeforest.net/user/validthemes/portfolio">validthemes</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery Frameworks
+============================================= -->
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/modernizr.custom.13711.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/progress-bar.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/count-to.js"></script>
+<script src="assets/js/YTPlayer.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
