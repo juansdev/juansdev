@@ -1,7 +1,7 @@
-![Banner - Mi Perfil](https://user-images.githubusercontent.com/15238761/164998971-5d980763-302e-42e6-945d-30bd9f0e6a04.png)
+![Banner - Bogota](https://github.com/juansdev/juansdev/assets/15238761/3b7cd3fb-521f-4a2a-9a1c-79a2b81a92b9)
 
 ## Habilidades
-![Banner GitHub](https://user-images.githubusercontent.com/15238761/210194549-cb620eda-85cc-438d-8ea4-4612defd4184.png)
+![Banner GitHub](https://github.com/juansdev/juansdev/assets/15238761/ee81c949-01b5-4bbc-be19-990c9f594327)
 #### Lenguajes de programación:
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)]()
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=101010)]()
@@ -12,6 +12,7 @@
 [![Kivy](https://img.shields.io/badge/Kivy-black?style=for-the-badge)]()
 [![Tkinter](https://img.shields.io/badge/Tkinter-black?style=for-the-badge)]()
 #### Frameworks desarrollo web:
+[![.NET](https://img.shields.io/badge/.Net-FFFFFF?style=for-the-badge&logo=.net&logoColor=white&labelColor=101010)]()
 [![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&labelColor=101010)]()
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=101010)]()
 [![VueJS](https://img.shields.io/badge/Vue.JS-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white&labelColor=101010)]()
