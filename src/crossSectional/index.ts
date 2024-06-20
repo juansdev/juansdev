@@ -1,0 +1,1 @@
+export {ManageDependency} from "./manage-dependency.cross-sectional";

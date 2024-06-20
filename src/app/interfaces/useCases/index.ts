@@ -1,0 +1,1 @@
+export type {IResumeApplication} from "./resume.application.interface";
