@@ -1,0 +1,137 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.dropdown_menu {
+  animation: rotateMenu 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+header {
+  @apply border-b border-gray-400;
+  nav {
+    @apply py-3 px-28;
+    div {
+      @apply flex flex-row flex-nowrap justify-end items-center;
+      h1 {
+        @apply text-2xl font-bold text-gray-700;
+      }
+
+      div {
+        @apply flex items-center gap-6;
+        //Menu Principal
+        ul {
+          @apply flex items-center gap-12;
+          //Items del Menu Principal
+          li {
+            font-family: var(--font-dm-sans), sans-serif;
+            @apply text-white text-lg font-medium;
+            &:hover {
+              @apply text-red-400 text-lg font-medium;
+            }
+
+            &.menu-active {
+              @apply text-red-400 text-lg font-medium #{!important};
+            }
+
+            &.dropdown:hover {
+              @apply text-red-400 text-lg font-medium cursor-pointer;
+              // Sub Menu
+              > ul {
+                @apply block;
+                // Items del Sub Menu
+                > li {
+                  @apply block;
+                }
+
+                li:hover {
+                  @apply bg-amber-200;
+                  > a {
+                    color: variables.$secondary-color;
+                  }
+
+                  // Third Menu
+                  > ul {
+                    @apply block;
+                    // Items Third Menu
+                    > li {
+                      @apply block;
+                    }
+
+                    // Fin Items Third Menu
+                  }
+
+                  // Fin Third Menu
+                }
+
+                // Fin Items del Sub Menu
+              }
+
+              // Fin Sub Menu
+            }
+
+            &.dropdown {
+              @apply text-white text-lg font-medium flex justify-center items-center relative z-10 gap-1.5;
+              // Sub Menu
+              > ul {
+                @apply hidden dropdown_menu origin-center absolute top-full -left-14 w-52 -z-10;
+                // Items del Sub Menu
+                li {
+                  @apply hidden opacity-100 bg-gray-700 py-3 px-5;
+                  // Third Menu
+                  > ul {
+                    &._1 {
+                      @apply w-full absolute -right-52 top-0 hidden;
+                    }
+
+                    &._2 {
+                      @apply w-full absolute -right-52 top-12 hidden;
+                    }
+                  }
+
+                  // Fin Third Menu
+                }
+
+                // Fin Items del Sub Menu
+              }
+
+              // Fin Sub Menu
+            }
+          }
+
+          //Final Items del Menu Principal
+        }
+
+        //Final Menu Principal
+      }
+    }
+  }
+}
+
+.checkbox-toggle:checked:hover + .hamburger {
+  @apply shadow;
+  div {
+    transform: rotate(225deg);
+
+    &:before {
+      @apply top-0 rotate-90;
+    }
+
+    &:after {
+      @apply opacity-0 top-0 rotate-90;
+    }
+  }
+}

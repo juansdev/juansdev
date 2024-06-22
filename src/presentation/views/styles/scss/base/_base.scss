@@ -1,0 +1,9 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+body {
+  color: variables.$primary-color;
+  background: variables.$bg-primary-color;
+}

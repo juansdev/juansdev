@@ -1,1 +1,1 @@
-export {title} from "./globals"
+export {dm_sans} from "./fonts";

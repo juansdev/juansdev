@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  color: #212529;
+  background: #0F141C;
+}
+
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.dropdown_menu {
+  animation: rotateMenu 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+header {
+  @apply border-b border-gray-400;
+}
+header nav {
+  @apply py-3 px-28;
+}
+header nav div {
+  @apply flex flex-row flex-nowrap justify-end items-center;
+}
+header nav div h1 {
+  @apply text-2xl font-bold text-gray-700;
+}
+header nav div div {
+  @apply flex items-center gap-6;
+}
+header nav div div ul {
+  @apply flex items-center gap-12;
+}
+header nav div div ul li {
+  font-family: var(--font-dm-sans), sans-serif;
+  @apply text-white text-lg font-medium;
+}
+header nav div div ul li:hover {
+  @apply text-red-400 text-lg font-medium;
+}
+header nav div div ul li.menu-active {
+  @apply text-red-400 text-lg font-medium !important;
+}
+header nav div div ul li.dropdown:hover {
+  @apply text-red-400 text-lg font-medium cursor-pointer;
+}
+header nav div div ul li.dropdown:hover > ul {
+  @apply block;
+}
+header nav div div ul li.dropdown:hover > ul > li {
+  @apply block;
+}
+header nav div div ul li.dropdown:hover > ul li:hover {
+  @apply bg-amber-200;
+}
+header nav div div ul li.dropdown:hover > ul li:hover > a {
+  color: #0F141C;
+}
+header nav div div ul li.dropdown:hover > ul li:hover > ul {
+  @apply block;
+}
+header nav div div ul li.dropdown:hover > ul li:hover > ul > li {
+  @apply block;
+}
+header nav div div ul li.dropdown {
+  @apply text-white text-lg font-medium flex justify-center items-center relative z-10 gap-1.5;
+}
+header nav div div ul li.dropdown > ul {
+  @apply hidden dropdown_menu origin-center absolute top-full -left-14 w-52 -z-10;
+}
+header nav div div ul li.dropdown > ul li {
+  @apply hidden opacity-100 bg-gray-700 py-3 px-5;
+}
+header nav div div ul li.dropdown > ul li > ul._1 {
+  @apply w-full absolute -right-52 top-0 hidden;
+}
+header nav div div ul li.dropdown > ul li > ul._2 {
+  @apply w-full absolute -right-52 top-12 hidden;
+}
+
+.checkbox-toggle:checked:hover + .hamburger {
+  @apply shadow;
+}
+.checkbox-toggle:checked:hover + .hamburger div {
+  transform: rotate(225deg);
+}
+.checkbox-toggle:checked:hover + .hamburger div:before {
+  @apply top-0 rotate-90;
+}
+.checkbox-toggle:checked:hover + .hamburger div:after {
+  @apply opacity-0 top-0 rotate-90;
+}
+
+/*# sourceMappingURL=main.css.map */

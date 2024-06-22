@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {IBaseView} from "@/presentation/views/core/interfaces/view.interface";
+import {IBaseView} from "@/presentation/views/core/interfaces";
 
 export class BaseView implements IBaseView {
   public reactNode: ReactNode = <></>;
