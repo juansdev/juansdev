@@ -1,7 +1,30 @@
 // Base
 $font-sans-serif: Helvetica, sans-serif;
+$font-dm-sans: var(--font-dm-sans), sans-serif;
 $font-size: 1rem;
 $font-weight: normal;
+$line-height: 1.5;
 $bg-primary-color: #0F141C;
+$bg-secondary-color: #171B22;
+$bg-third-color: #0059bd;
+$bg-fourth-color: #fdfdfd;
+$bg-fifty-color: #00CC97;
 $primary-color: #212529;
 $secondary-color: #0F141C;
+$third-color: #909090;
+$fourth-color: rgb(10, 88, 202);
+$border-primary-color: #ffffff38;
+
+// Animaciones
+// Menu
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}

@@ -1,0 +1,110 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+// Botones del tipo Toggle
+.dropdown_menu {
+  animation: rotateMenu 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.checkbox-toggle:checked:hover + .hamburger {
+  @apply shadow;
+  div {
+    transform: rotate(225deg);
+
+    &:before {
+      @apply top-0 rotate-90;
+    }
+
+    &:after {
+      @apply opacity-0 top-0 rotate-90;
+    }
+  }
+}
+
+// Botones
+
+// Botón del tipo Menú
+ul.menu {
+  @apply flex items-center gap-12;
+  //Item del Menu Principal
+  li {
+    font-family: variables.$font-dm-sans;
+    @apply text-white text-lg font-medium;
+    &:hover {
+      @apply text-red-400 text-lg font-medium;
+    }
+
+    &.menu-active {
+      @apply text-red-400 text-lg font-medium #{!important};
+    }
+
+    &.dropdown:hover {
+      @apply text-red-400 text-lg font-medium cursor-pointer;
+      // Sub Menu
+      > ul {
+        @apply block;
+        // Item del Sub Menu
+        > li {
+          @apply block;
+        }
+
+        li:hover {
+          @apply bg-amber-200;
+          > a {
+            color: variables.$secondary-color;
+          }
+
+          // Tercer Menu
+          > ul {
+            @apply block;
+            // Item Tercer Menu
+            > li {
+              @apply block;
+            }
+
+            // Fin Item Tercer Menu
+          }
+
+          // Fin Item Tercer Menu
+        }
+
+        // Fin Item del Sub Menu
+      }
+
+      // Fin Sub Menu
+    }
+
+    &.dropdown {
+      @apply text-white text-lg font-medium flex justify-center items-center relative z-10 gap-1.5;
+      // Sub Menu
+      > ul {
+        @apply hidden dropdown_menu origin-center absolute top-full -left-14 w-52 -z-10;
+        // Item del Sub Menu
+        li {
+          @apply hidden opacity-100 bg-gray-700 py-3 px-5;
+          // Item Tercer Menu
+          > ul {
+            &._1 {
+              @apply w-full absolute -right-52 top-0 hidden;
+            }
+
+            &._2 {
+              @apply w-full absolute -right-52 top-12 hidden;
+            }
+          }
+
+          // Fin Item Tercer Menu
+        }
+
+        // Fin Item del Sub Menu
+      }
+
+      // Fin Sub Menu
+    }
+  }
+
+  //Final Item del Menu Principal
+}

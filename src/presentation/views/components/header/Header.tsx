@@ -1,44 +1,118 @@
 import {dm_sans} from "@/presentation/views/fonts";
 import Link from "next/link";
-import {IMenuItems, Menu} from "@/presentation/views/components/Menu";
+import {IMenuItems, Menu} from "@/presentation/views/components/header/Menu";
 
 export const Header = () => {
   const menuItems: IMenuItems = {
     "Home": {
+      href: "#home",
       isSelected: true
     },
-    "About": {},
+    "About": {
+      href: "#about"
+    },
     "Services": {
       children: {
         "Services": {
-          children: ["Services Default", "Services Row", "Services 3 Grid", "Services 2 Grid"]
+          children: {
+            "Services Default": {
+              href: "#"
+            },
+            "Services Row": {
+              href: "#"
+            },
+            "Services 3 Grid": {
+              href: "#"
+            },
+            "Services 2 Grid": {
+              href: "#"
+            }
+          }
         },
         "Single Services": {
-          children: ["Standard", "Youtube Video", "Vimeo Video"]
+          children: {
+            "Standard": {
+              href: "#"
+            },
+            "Youtube Video": {
+              href: "#"
+            },
+            "Vimeo Video": {
+              href: "#"
+            }
+          }
         }
       }
     },
     "Portfolio": {
       children: {
         "Portfolio": {
-          children: ["Portfolio Default", "Portfolio Grid", "Portfolio Split", "Portfolio Split Video"]
+          children: {
+            "Portfolio Default": {
+              href: "#"
+            },
+            "Portfolio Grid": {
+              href: "#"
+            },
+            "Portfolio Split": {
+              href: "#"
+            },
+            "Portfolio Split Video": {
+              href: "#"
+            }
+          }
         },
         "Single Portfolio": {
-          children: ["Standard", "Portfolio V.2", "Youtube Video"]
+          children: {
+            "Standard": {
+              href: "#"
+            },
+            "Portfolio V.2": {
+              href: "#"
+            },
+            "Youtube Video": {
+              href: "#"
+            }
+          }
         }
       }
     },
     "Blog": {
       children: {
         "Blog": {
-          children: ["Blog Default", "Blog 2 Grid", "Blog 3 Grid", "Blog Right Sidebar"]
+          children: {
+            "Blog Default": {
+              href: "#"
+            },
+            "Blog 2 Grid": {
+              href: "#"
+            },
+            "Blog 3 Grid": {
+              href: "#"
+            },
+            "Blog Right Sidebar": {
+              href: "#"
+            }
+          }
         },
         "Single Blog": {
-          children: ["Standard", "Single Blog V.2", "Youtube Video"]
+          children: {
+            "Standard": {
+              href: "#"
+            },
+            "Single Blog V.2": {
+              href: "#"
+            },
+            "Youtube Video": {
+              href: "#"
+            }
+          }
         }
       }
     },
-    "Contact": {}
+    "Contact": {
+      href: "#contact"
+    }
   }
   return (<>
       <header className={dm_sans.variable}>

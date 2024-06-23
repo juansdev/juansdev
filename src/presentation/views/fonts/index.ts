@@ -1,1 +1,1 @@
-export {dm_sans} from "./fonts";
+export {dm_sans} from "./fonts.presentation.views.fonts";

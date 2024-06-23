@@ -1,0 +1,141 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.show {
+  @apply opacity-100 #{!important};
+  transform: translateY(0) scale(1) !important;
+}
+
+.sidebar {
+  @apply max-w-64 w-full h-screen flex flex-col justify-between fixed overflow-auto gap-0;
+  background-color: variables.$bg-secondary-color;
+
+  &::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  > .profile-img-main {
+    @apply text-center pl-5 pr-5 pt-5;
+    > img {
+      @apply max-w-full;
+      transform: scale(0.5);
+      transition: all 1.5s;
+    }
+
+    > h1 {
+      @apply opacity-0 text-center text-white text-3xl font-bold pt-3.5 pr-0 pb-1 pl-0;
+      transition: all 1.5s;
+
+      > span {
+        @apply font-normal ml-2;
+      }
+    }
+
+    > h2 {
+      @apply text-center font-medium -translate-y-full opacity-0;
+      transition: all 1.5s;
+      color: variables.$third-color;
+    }
+
+    > div {
+      @apply -translate-y-full opacity-0 flex items-center justify-center mx-0 my-5 gap-2.5;
+      transition: all 1.5s;
+
+      > a {
+        @apply w-10 h-10 flex items-center justify-center;
+        transition: all 1.5s;
+        border-radius: 50%;
+        background-color: variables.$bg-primary-color;
+
+        &:hover {
+          background: variables.$bg-third-color;
+        }
+
+        > img {
+          @apply max-w-full;
+        }
+      }
+    }
+  }
+
+  > .menu-list-main {
+    > ul {
+      > li {
+        @apply px-5 py-2.5 border-t-2 border-solid;
+        border-top-color: variables.$border-primary-color;
+
+        > a {
+          @apply flex gap-2.5 items-center opacity-0 -translate-x-28;
+          transition: all 1.5s;
+          color: variables.$third-color;
+
+          &.active {
+            filter: brightness(0) saturate(100%) invert(55%) sepia(64%) saturate(887%) hue-rotate(120deg) brightness(94%) contrast(101%);
+          }
+
+          &:hover {
+            filter: brightness(0) saturate(100%) invert(55%) sepia(64%) saturate(887%) hue-rotate(120deg) brightness(94%) contrast(101%);
+          }
+
+          img {
+            @apply text-white;
+          }
+        }
+      }
+    }
+  }
+
+  > div {
+    > div.wrap {
+      @apply m-5 text-center;
+      > a {
+        @apply relative inline-block h-14 w-full p-0 rounded-3xl;
+        background-color: variables.$bg-primary-color;
+        transition: .5s;
+
+        &:hover {
+          background-color: variables.$bg-third-color;
+          color: variables.$fourth-color;
+
+          > span.title {
+            @apply left-10 opacity-0;
+          }
+
+          > span.title-hover {
+            @apply opacity-100 left-10;
+          }
+
+          > span.circle {
+            @apply left-full -ml-14;
+            background-color: variables.$bg-fourth-color !important;
+
+            > svg > path {
+              fill: variables.$bg-third-color;
+            }
+          }
+        }
+
+        > span {
+          &.circle {
+            @apply absolute m-1.5 h-12 w-12 left-0 flex items-center justify-center;
+            transition: .5s;
+            border-radius: 50%;
+            background-color: variables.$bg-third-color;
+          }
+
+          &.title {
+            @apply left-20 absolute top-4 text-center m-0 text-white;
+            transition: .5s;
+          }
+
+          &.title-hover {
+            @apply left-20 opacity-0 absolute top-4 text-center m-0 text-white;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+}
