@@ -1,6 +1,6 @@
 @use "./variables";
 
-$theme-map: () !global;
+$theme-map: ();
 @mixin applyTheme( $themes: variables.$themes ) {
   @each $theme, $map in $themes {
 

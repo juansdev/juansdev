@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scss": "sass src/presentation/views/styles/scss:src/presentation/views/styles/css"
   },
   "dependencies": {
     "clsx": "^2.1.1",
