@@ -1,0 +1,41 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/functions";
+@use "../../abstracts/variables";
+
+div.main-content {
+  @media(variables.$media-query-max-width-575) {
+    @apply overflow-hidden #{!important};
+    padding: 0 10px !important;
+  }
+  @media(variables.$media-query-max-width-1199) {
+    @apply max-w-full #{!important};
+  }
+  @media (variables.$media-query-min-width-576) and (variables.$media-query-max-width-1199) {
+    @apply px-5 #{!important};
+  }
+  @media (variables.$media-query-min-width-1200) and (variables.$media-query-max-width-1399) {
+    max-width: 880px !important;
+    padding: 0 20px 0 35px !important;
+  }
+  @media (variables.$media-query-min-width-1400) and (variables.$media-query-max-width-1599) {
+    padding: 0 20px 0 35px !important;
+  }
+}
+
+.container {
+  @media #{functions.screen(sm)}{
+    max-width: 540px;
+  }
+  @media #{functions.screen(md)}{
+    max-width: 720px;
+  }
+  @media #{functions.screen(lg)}{
+    max-width: 960px;
+  }
+  @media #{functions.screen(xl)}{
+    max-width: 1140px;
+  }
+  @media #{functions.screen(xxl)}{
+    max-width: 1320px;
+  }
+}

@@ -9,10 +9,6 @@ header {
     @apply py-3 px-28;
     div {
       @apply flex flex-row flex-nowrap justify-end items-center;
-      h1 {
-        @apply text-2xl font-bold text-gray-700;
-      }
-
       div {
         @apply flex items-center gap-6;
       }

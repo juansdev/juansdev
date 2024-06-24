@@ -1,4 +1,3 @@
-import {dm_sans} from "@/presentation/views/fonts";
 import Link from "next/link";
 import {IMenuItems, Menu} from "@/presentation/views/components/header/Menu";
 
@@ -115,13 +114,13 @@ export const Header = () => {
     }
   }
   return (<>
-      <header className={dm_sans.variable}>
+      <header>
         <nav>
           <div>
             <div>
               <Menu menuItems={menuItems}/>
-              <Link href="#">
-                <div className="w-12 h-12 bg-amber-300 justify-center items-center flex rounded-lg">
+              <Link className={"header-wrap"} href="#">
+                <div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clipPath="url(#clip0_25_74)">
                       <path d="M12 3V15" stroke="#0F141C" strokeWidth="2" strokeLinecap="round"
@@ -135,15 +134,6 @@ export const Header = () => {
                   </svg>
                 </div>
               </Link>
-              <div className="z-10 relative">
-                <input type="checkbox" name={"checkbox"}
-                       className={"relative z-50 cursor-pointer w-10 opacity-0 checkbox-toggle"}/>
-                <div
-                  className={"hamburger absolute top-0 right-0 z-10 w-12 py-2 px-3 rounded-tl-none rounded-tr-sm rounded-br-sm rounded-bl-none cursor-pointer transition-shadow flex items-center justify-center"}>
-                  <div
-                    className={"relative flex-none w-full h-0.5 bg-white transition-all flex items-center justify-center before:absolute before:z-10 before:-top-2.5 before:left-0 before:w-full before:h-0.5 before:bg-inherit before:transition-all before:box-border after:top-2.5 after:absolute after:z-10 after:left-0 after:w-full after:h-0.5 after:bg-inherit after:transition-all after:box-border"}></div>
-                </div>
-              </div>
             </div>
           </div>
         </nav>

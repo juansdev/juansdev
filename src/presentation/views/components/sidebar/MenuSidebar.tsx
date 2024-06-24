@@ -22,7 +22,7 @@ export const MenuSidebar = ({menuItems}: IMenuSidebarProps) => {
   const keyMenuItemSelected = Object.keys(menuItems).find(keyMenuItem => menuItems[keyMenuItem].isSelected);
   const [nameMenuSelected, setNameMenuSelected] = useState(keyMenuItemSelected);
   return (
-    <ul>
+    <ul className={"menu-list-main"}>
       {
         Object.keys(menuItems).map(((nameMenuItem, index) => (
           <li key={nameMenuItem + `_${index}`}>
@@ -33,7 +33,7 @@ export const MenuSidebar = ({menuItems}: IMenuSidebarProps) => {
                   onClick={() => setNameMenuSelected(nameMenuItem)}>
               <Image src={menuItems[nameMenuItem].pathImage}
                      alt={menuItems[nameMenuItem].altImage}
-                     width={20} height={20}/>
+                     width={24} height={24}/>
               {nameMenuItem}
             </Link>
           </li>

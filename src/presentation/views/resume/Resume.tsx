@@ -1,16 +1,10 @@
 import {BaseView} from "@/presentation/views/core";
-import {Header} from "@/presentation/views/components";
-import {Sidebar} from "@/presentation/views/components/sidebar/Sidebar";
+import {ResumeHome} from "@/presentation/views/resume/components";
 
 class ResumeView extends BaseView {
-  reactNode = <main>
-    <div className={"fix-bg"}>
-      <div className={"main-content"}>
-        <Sidebar/>
-        <Header/>
-      </div>
-    </div>
-  </main>
+  reactNode = <>
+    <ResumeHome/>
+  </>
 }
 
 export const Resume = new ResumeView().view;

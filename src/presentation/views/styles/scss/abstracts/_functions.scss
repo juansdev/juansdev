@@ -1,0 +1,10 @@
+@use "./variables";
+
+@function themed( $theme-map, $key ) {
+  @return map-get($theme-map, $key);
+}
+
+@function screen($size) {
+  @return '(min-width: '+map-get(variables.$screen-sizes, $size)+")";
+}
+

@@ -1,0 +1,30 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@import "../abstracts/extends";
+@import "./media-query/content";
+
+main {
+  > div.fix-bg {
+    @include mixins.applyTheme {
+      background: functions.themed(mixins.$theme-map, "secondary-color") url("/images/noice-img.webp") center/cover;
+    }
+    @apply relative overflow-hidden z-0 bg-blend-soft-light h-screen;
+
+    > div.main-container {
+      @apply w-full ml-auto mr-auto container;
+      padding-right: variables.$gutter-x * .5;
+      padding-left: variables.$gutter-x * .5;
+
+      > div.main-content {
+        @apply h-screen overflow-x-auto w-full float-right pr-5 pt-0 pb-0;
+        padding-left: 60px;
+        max-width: 1040px;
+        @include mixins.applyTheme {
+          background: functions.themed(mixins.$theme-map, "secondary-color");
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ const config: Config = {
     "./src/presentation/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
+    darkMode: "selector",
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

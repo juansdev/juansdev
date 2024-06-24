@@ -2,47 +2,58 @@
 @use "../abstracts/functions";
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
+@import "../abstracts/extends";
+@import "./media-query/buttons";
 
-// Botones del tipo Toggle
-.dropdown_menu {
-  animation: rotateMenu 400ms ease-in-out forwards;
-  transform-origin: top center;
+// Animaciones
+// Menu
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
 }
 
-.checkbox-toggle:checked:hover + .hamburger {
-  @apply shadow;
-  div {
-    transform: rotate(225deg);
-
-    &:before {
-      @apply top-0 rotate-90;
-    }
-
-    &:after {
-      @apply opacity-0 top-0 rotate-90;
-    }
-  }
+// * Botones del tipo Toggle
+// - Header
+div.checkbox-toggle {
+  @apply hidden;
 }
 
 // Botones
 
-// Botón del tipo Menú
+// * Botones del tipo Menú
+// - Header
 ul.menu {
   @apply flex items-center gap-12;
   //Item del Menu Principal
   li {
     font-family: variables.$font-dm-sans;
-    @apply text-white text-lg font-medium;
+    @apply text-lg font-medium;
     &:hover {
-      @apply text-red-400 text-lg font-medium;
+      @apply text-lg font-medium;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "header-primary-color")
+      }
     }
 
     &.menu-active {
-      @apply text-red-400 text-lg font-medium #{!important};
+      @apply text-lg font-medium #{!important};
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "header-primary-color") !important;
+      }
     }
 
     &.dropdown:hover {
-      @apply text-red-400 text-lg font-medium cursor-pointer;
+      @apply text-lg font-medium cursor-pointer;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "header-primary-color") !important;
+      }
       // Sub Menu
       > ul {
         @apply block;
@@ -54,7 +65,9 @@ ul.menu {
         li:hover {
           @apply bg-amber-200;
           > a {
-            color: variables.$secondary-color;
+            @include mixins.applyTheme {
+              color: functions.themed(mixins.$theme-map, "secondary-color")
+            }
           }
 
           // Tercer Menu
@@ -78,10 +91,12 @@ ul.menu {
     }
 
     &.dropdown {
-      @apply text-white text-lg font-medium flex justify-center items-center relative z-10 gap-1.5;
+      @apply text-lg font-medium flex justify-center items-center relative z-10 gap-1.5;
       // Sub Menu
       > ul {
-        @apply hidden dropdown_menu origin-center absolute top-full -left-14 w-52 -z-10;
+        @apply hidden origin-center absolute top-full -left-14 w-52 -z-10;
+        animation: rotateMenu 400ms ease-in-out forwards;
+        transform-origin: top center;
         // Item del Sub Menu
         li {
           @apply hidden opacity-100 bg-gray-700 py-3 px-5;
@@ -107,4 +122,94 @@ ul.menu {
   }
 
   //Final Item del Menu Principal
+}
+
+// - Sidebar
+ul.menu-list-main {
+  > li {
+    @apply px-5 py-2.5 border-t-2 border-solid;
+    @include mixins.applyTheme {
+      border-top-color: functions.themed(mixins.$theme-map, "border-primary-color")
+    }
+
+    > a {
+      @apply flex gap-2.5 items-center fade-right;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "third-color")
+      }
+
+      &.active, &:hover {
+        filter: brightness(0) saturate(100%) invert(55%) sepia(64%) saturate(887%) hue-rotate(120deg) brightness(94%) contrast(101%);
+      }
+    }
+  }
+}
+
+// * Botones del CV
+// - Header
+a.header-wrap {
+  > div {
+    @apply w-12 h-12 bg-amber-300 justify-center items-center flex rounded-lg;
+  }
+}
+
+// - Sidebar
+div.wrap {
+  @apply m-5 text-center;
+  > a {
+    @apply relative inline-block h-14 w-full p-0 rounded-3xl;
+    @include mixins.applyTheme {
+      background-color: functions.themed(mixins.$theme-map, "secondary-color")
+    }
+    @extend %transition-\.5s;
+
+    &:hover {
+      @include mixins.applyTheme {
+        background-color: functions.themed(mixins.$theme-map, "fourth-color");
+        color: functions.themed(mixins.$theme-map, "hover-fourth-color");
+      }
+
+      > span.title {
+        @apply left-10 opacity-0;
+      }
+
+      > span.title-hover {
+        @apply opacity-100 left-10;
+      }
+
+      > span.circle {
+        @apply left-full -ml-14;
+        @include mixins.applyTheme {
+          background-color: functions.themed(mixins.$theme-map, "bg-secondary-color") !important;
+        }
+
+        > svg > path {
+          @include mixins.applyTheme {
+            fill: functions.themed(mixins.$theme-map, "fourth-color") !important;
+          }
+        }
+      }
+    }
+
+    > span {
+      &.circle {
+        @apply absolute m-1.5 h-12 w-12 left-0 flex items-center justify-center;
+        @extend %transition-\.5s;
+        border-radius: 50%;
+        @include mixins.applyTheme {
+          background-color: functions.themed(mixins.$theme-map, "fourth-color") !important;
+        }
+      }
+
+      &.title {
+        @apply left-20 absolute top-4 text-center m-0;
+        @extend %transition-\.5s;
+      }
+
+      &.title-hover {
+        @apply left-20 opacity-0 absolute top-4 text-center m-0;
+        @extend %transition-\.5s;
+      }
+    }
+  }
 }

@@ -1,40 +1,73 @@
 //Abstracts
-@use "../abstracts/functions";
 @use "../abstracts/mixins";
+@use "../abstracts/functions";
 @use "../abstracts/variables";
 
-* {
-  @apply m-0 p-0 box-border scroll-smooth;
-  font-family: variables.$font-dm-sans;
-  font-style: normal;
+@layer base {
+
+  * {
+    @apply m-0 p-0 box-border scroll-smooth;
+    font-family: variables.$font-dm-sans;
+    font-style: variables.$font-style;
+    @include mixins.applyTheme {
+      color: functions.themed(mixins.$theme-map, "base-color");
+    }
+  }
+
+  body {
+    @apply m-0 scroll-smooth;
+    font-family: variables.$font-sans-serif;
+    font-size: variables.$font-size;
+    font-weight: variables.$font-weight;
+    line-height: variables.$line-height;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    @include mixins.applyTheme {
+      background-color: functions.themed(mixins.$theme-map, "bg-base-color");
+      color: functions.themed(mixins.$theme-map, "primary-color");
+    }
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  // Scroll
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  ::-webkit-scrollbar-corner {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-clip-content;
+    @include mixins.applyTheme {
+      background: functions.themed(mixins.$theme-map, "bg-scroll-primary-color")
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    @include mixins.applyTheme {
+      background-color: functions.themed(mixins.$theme-map, "secondary-color")
+    }
+  }
 }
 
-body {
-  @apply m-0 scroll-smooth;
-  font-size: variables.$font-size;
-  font-weight: variables.$font-weight;
-  line-height: variables.$line-height;
-  color: variables.$primary-color;
-  background-color: #fff;
+.row {
+  margin-top: -1*variables.$gutter-y;
+  margin-right: -.5*variables.$gutter-x;
+  margin-left: -.5*variables.$gutter-x;
+
+  > * {
+    @apply max-w-full w-full flex-shrink-0;
+    padding-right: variables.$gutter-x*.5;
+    padding-left: variables.$gutter-x*.5;
+    margin-top: variables.$gutter-y;
+  }
 }
 
-html {
-  @apply scroll-smooth;
-}
-
-::-webkit-scrollbar {
-  @apply w-1;
-}
-
-::-webkit-scrollbar-corner {
-  display: none;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-clip-content;
-  background: variables.$bg-fifty-color;
-}
-
-::-webkit-scrollbar-track {
-  background-color: variables.$bg-primary-color;
+.none {
+  @apply hidden #{!important};
 }

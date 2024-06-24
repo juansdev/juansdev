@@ -1,0 +1,35 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/functions";
+@use "../../abstracts/variables";
+
+div.checkbox-toggle {
+  @media (variables.$media-query-max-width-1199) {
+    @apply fixed top-5 right-5 z-10 items-center justify-center;
+    width: 50px;
+    height: 50px;
+    display: flex !important;
+    input {
+      @apply relative z-50 cursor-pointer w-10 opacity-0;
+    }
+    input:checked + .hamburger {
+      @apply shadow;
+      div {
+        transform: rotate(225deg);
+
+        &:before {
+          @apply top-0 rotate-90;
+        }
+
+        &:after {
+          @apply opacity-0 top-0 rotate-90;
+        }
+      }
+    }
+    .hamburger {
+      @apply absolute top-0 right-0 z-10 w-12 py-2 px-3 rounded-tl-none rounded-tr-sm rounded-br-sm rounded-bl-none cursor-pointer transition-shadow flex items-center justify-center;
+      > div {
+        @apply relative flex-none w-full h-0.5 bg-white transition-all flex items-center justify-center before:absolute before:z-10 before:-top-2.5 before:left-0 before:w-full before:h-0.5 before:bg-inherit before:transition-all before:box-border after:top-2.5 after:absolute after:z-10 after:left-0 after:w-full after:h-0.5 after:bg-inherit after:transition-all after:box-border;
+      }
+    }
+  }
+}

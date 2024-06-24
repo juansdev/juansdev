@@ -1,0 +1,17 @@
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+@use "../abstracts/variables";
+
+.col-xxl-6 {
+  @media #{functions.screen(xxl)}{
+    @apply w-1/2;
+    flex: 0 0 auto;
+  }
+}
+
+.col-lg-6 {
+  @media #{functions.screen(lg)}{
+    @apply w-1/2;
+    flex: 0 0 auto;
+  }
+}

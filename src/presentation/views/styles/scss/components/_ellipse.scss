@@ -1,0 +1,79 @@
+//Abstracts
+@use "../abstracts/mixins";
+@use "../abstracts/functions";
+@use "../abstracts/variables";
+@import "../abstracts/extends";
+
+// Animaciones
+@keyframes changeColor {
+  0%,
+  100% {
+    @include mixins.changeColor(rgb(0, 204, 151, 24%), blur(250px));
+  }
+  20% {
+    @include mixins.changeColor(rgba(255, 0, 0, 0.8), blur(200px));
+  }
+  40% {
+    @include mixins.changeColor(rgba(0, 0, 255, 0.8), blur(150px));
+  }
+  60% {
+    @include mixins.changeColor(rgba(255, 255, 0, 0.8), blur(200px));
+  }
+  80% {
+    @include mixins.changeColor(rgba(0, 255, 0, 22), blur(250px));
+  }
+}
+
+@keyframes moveEllipse1 {
+  0% {
+    @apply top-0 left-0;
+  }
+  25% {
+    @apply top-0 left-full -translate-x-full;
+  }
+  50% {
+    @apply top-full left-full;
+    transform: translate(-100%, -100%);
+  }
+  75% {
+    @apply top-full left-0 -translate-y-full;
+  }
+  100% {
+    @apply top-0 left-0;
+  }
+}
+
+@keyframes moveEllipse2 {
+  0% {
+    @apply top-full right-0 -translate-y-full;
+  }
+  25% {
+    @apply top-full right-full;
+    transform: translate(100%, -100%);
+  }
+  50% {
+    @apply top-0 right-full translate-x-full;
+  }
+  75% {
+    @apply top-0 right-0;
+  }
+  100% {
+    @apply top-full right-0 -translate-y-full;
+  }
+}
+
+.ellipse1 {
+  @extend %ellipse;
+  @include mixins.applyTheme {
+    background-color: functions.themed(mixins.$theme-map, "bg-ellipse-1-primary-color");
+  }
+  animation: moveEllipse1 20s linear infinite, changeColor 20s linear infinite;
+}
+
+.ellipse2 {
+  @extend %ellipse;
+  @include mixins.applyTheme {
+    background-color: functions.themed(mixins.$theme-map, "bg-ellipse-2-primary-color");
+  }
+  animation: moveEllipse2 20s linear infinite, changeColor 20s linear infinite;
+}

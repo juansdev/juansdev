@@ -1,0 +1,22 @@
+@use "./variables";
+
+$theme-map: () !global;
+@mixin applyTheme( $themes: variables.$themes ) {
+  @each $theme, $map in $themes {
+
+    .#{$theme} & {
+      @each $key, $sub-map in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+    }
+
+  }
+}
+
+@mixin changeColor($backgroundColor, $filter) {
+  background-color: $backgroundColor;
+  filter: $filter;
+}

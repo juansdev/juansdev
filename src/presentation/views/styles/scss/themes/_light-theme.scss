@@ -1,0 +1,44 @@
+// Variables
+$base-color: #ffffff;
+$primary-color: #212529;
+$secondary-color: #0F141C;
+$third-color: #909090;
+$fourth-color: #0059bd;
+
+$bg-base-color: #ffffff;
+$bg-primary-color: #171B22;
+$bg-secondary-color: #fdfdfd;
+$bg-third-color: #ffdb59;
+
+$border-primary-color: #ffffff38;
+
+// Header
+$header-primary-color: rgb(248 113 113 / 1);
+
+// Scroll
+$bg-scroll-primary-color: #00CC97;
+
+// Item Menu
+$hover-fourth-color: rgb(10, 88, 202);
+
+//Ellipse
+$bg-ellipse-1-primary-color: rgb(0 204 151 / 24%);
+$bg-ellipse-2-primary-color: rgb(255 117 156 / 24%);
+
+$light-theme: (
+        base-color: $base-color,
+        primary-color: $primary-color,
+        secondary-color: $secondary-color,
+        third-color: $third-color,
+        bg-base-color: $bg-base-color,
+        bg-primary-color: $bg-primary-color,
+        bg-secondary-color: $bg-secondary-color,
+        bg-third-color: $bg-third-color,
+        border-primary-color: $border-primary-color,
+        bg-scroll-primary-color: $bg-scroll-primary-color,
+        fourth-color: $fourth-color,
+        hover-fourth-color: $hover-fourth-color,
+        bg-ellipse-1-primary-color: $bg-ellipse-1-primary-color,
+        bg-ellipse-2-primary-color: $bg-ellipse-2-primary-color,
+        header-primary-color:$header-primary-color
+);

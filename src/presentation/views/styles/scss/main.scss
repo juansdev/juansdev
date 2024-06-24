@@ -1,24 +1,23 @@
 //Vendors
 @use "vendors/tailwind";
 
-//Base
-@use "base/base";
-@use "base/typography";
-
 //Themes
 @use "themes/dark-theme";
 @use "themes/light-theme";
 
+//Base
+@use "base/media_query";
+@use "base/base";
+
 //Components
+@use "components/loading";
 @use "components/buttons";
-@use "components/cards";
-@use "components/modals";
+@use "components/ellipse";
 
 //Layout
-@use "layout/footer";
-@use "layout/grid";
 @use "layout/header";
 @use "layout/sidebar";
+@use "layout/content";
 
 //Pages
-@use "pages/resume";
+@use "pages/resume/resume";

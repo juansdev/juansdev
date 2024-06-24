@@ -1,0 +1,14 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/functions";
+@use "../../abstracts/variables";
+
+.sidebar {
+  @media(variables.$media-query-max-width-1199) {
+    @apply fixed top-0 h-full z-50;
+    width: 250px;
+    transition: left 0.3s ease;
+    &.show {
+      @apply left-0;
+    }
+  }
+}

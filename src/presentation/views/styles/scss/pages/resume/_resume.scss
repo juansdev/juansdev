@@ -1,0 +1,65 @@
+//Components
+@import "./components/home";
+
+.fade-up,
+.fade-down,
+.zoom-in,
+.zoom-out {
+  @apply opacity-0;
+  @extend %transition-all-1\.5s;
+}
+
+.fade-up {
+  @apply -translate-y-full;
+}
+
+.fade-down {
+  @apply translate-y-full;
+}
+
+.zoom-in {
+  transform: scale(0.5);
+}
+
+.zoom-out {
+  transform: scale(1.5);
+}
+
+.fade-right {
+  @apply opacity-0 -translate-x-full;
+  @extend %transition-all-1\.5s;
+}
+
+.fade-left {
+  @apply opacity-0 translate-x-full;
+  @extend %transition-all-1\.5s;
+}
+
+.flip-left {
+  @apply opacity-0;
+  transform: perspective(400px) rotateY(-90deg);
+  @extend %transition-all-1\.5s;
+}
+
+.flip-right {
+  @apply opacity-0;
+  transform: perspective(400px) rotateY(90deg);
+  @extend %transition-all-1\.5s;
+}
+
+.flip-up {
+  @apply opacity-0;
+  transform: perspective(400px) rotateX(-90deg);
+  @extend %transition-all-1\.5s;
+}
+
+.flip-down {
+  @apply opacity-0;
+  transform: perspective(400px) rotateX(90deg);
+  @extend %transition-all-1\.5s;
+}
+
+.show {
+  @apply opacity-100 #{!important};
+  transform: translateY(0) scale(1) !important;
+}

@@ -1,0 +1,102 @@
+//Abstracts
+@use "../../../abstracts/functions";
+@use "../../../abstracts/mixins";
+@use "../../../abstracts/variables";
+@import "../../../abstracts/extends";
+@import "./media-query/home";
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.section-home {
+  @apply overflow-hidden;
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  > div {
+    @apply flex flex-wrap row;
+    > .home-resume {
+      @apply col-xxl-6 col-lg-6;
+      > h2 {
+        @apply zoom-in text-8xl font-bold;
+        @include mixins.applyTheme {
+          color: functions.themed(mixins.$theme-map, "base-color");
+        }
+        line-height: 120px;
+
+        > span {
+          @apply font-normal ml-2;
+        }
+      }
+
+      > h3 {
+        @apply text-2xl font-medium py-5 px-0;
+        @include mixins.applyTheme {
+          color: functions.themed(mixins.$theme-map, "fourth-color");
+        }
+      }
+
+      p {
+        @apply fade-down leading-8 font-medium max-w-96;
+        font-size: 20px;
+        @include mixins.applyTheme {
+          color: functions.themed(mixins.$theme-map, "third-color");
+        }
+      }
+
+      > div {
+        @apply fade-down flex items-center gap-4 mt-10;
+        > .wrapper {
+          > a {
+            @apply flex justify-center items-center h-16 text-center font-medium relative overflow-hidden transition-all z-10 py-4 px-8;
+            font-size: 20px;
+            border-radius: 32px;
+            @include mixins.applyTheme {
+              color: functions.themed(mixins.$theme-map, "secondary-color");
+              background: functions.themed(mixins.$theme-map, "bg-scroll-primary-color");
+            }
+
+            &:after {
+              transition-delay: .2s;
+            }
+
+            &:before, &:after {
+              @apply absolute w-full h-full -top-full left-0 -z-10 transition-all;
+              @include mixins.applyTheme {
+                color: functions.themed(mixins.$theme-map, "fourth-color");
+              }
+            }
+
+            &.home-btn-contact {
+              @include mixins.applyTheme {
+                background: functions.themed(mixins.$theme-map, "bg-third-color");
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > .home-profile {
+      @apply relative col-xxl-6 col-lg-6;
+      .flower {
+        @apply absolute;
+        top: 113px;
+        left: 66px;
+        filter: brightness(0) saturate(100%) invert(50%) sepia(73%) saturate(413%) hue-rotate(323deg) brightness(103%) contrast(101%);
+        animation: rotation infinite 9s linear;
+      }
+
+      .profile-img {
+        @apply zoom-in max-w-full;
+        padding-top: 50px;
+      }
+    }
+  }
+}

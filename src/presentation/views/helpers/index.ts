@@ -1,3 +1,3 @@
 export {
-  useIsVisible, toggleClassNameOfSelectorIfElementIsVisibleByScroll
-} from "./useIsVisible.presentation.views.helpers";
+  useIsVisible, toggleClassNameOfSelectorIfElementIsVisible, toggleClassNameOfSelectorIfElementIsVisibleByScroll
+} from "./elementIsVisible.presentation.views.helpers";

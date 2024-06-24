@@ -19,20 +19,17 @@ export function useIsVisible<T>(ref: RefObject<T>) {
   return isIntersecting;
 }
 
-const isScrolledIntoView = (element: HTMLElement) => {
-  const docViewTop = window.scrollY;
-  const docViewBottom = docViewTop + window.innerHeight;
-
-  const elemTop = element.getBoundingClientRect().top + window.scrollY;
-  const elemBottom = elemTop + element.offsetHeight;
-
-  return (elemBottom <= docViewBottom) && (elemTop >= docViewTop);
+const isScrolledIntoView = (containerScrollable: Element, element: HTMLElement) => {
+  const docViewTop = window.innerHeight + containerScrollable.scrollTop;
+  const elemTop = element.getBoundingClientRect().top;
+  const elemBottom = element.getBoundingClientRect().bottom;
+  return docViewTop >= elemTop && elemBottom >= 0;
 }
 
-export const toggleClassNameOfSelectorIfElementIsVisible = (selector: string, classNameToToggle: string) => {
+export const toggleClassNameOfSelectorIfElementIsVisible = (containerScrollable: Element, selector: string, classNameToToggle: string) => {
   const elements = document.querySelectorAll<HTMLElement>(selector);
   elements.forEach(function (elem) {
-    if (isScrolledIntoView(elem))
+    if (isScrolledIntoView(containerScrollable, elem))
       elem.classList.add(...classNameToToggle.split(" "));
     else elem.classList.remove(...classNameToToggle.split(" "));
   });
@@ -40,5 +37,5 @@ export const toggleClassNameOfSelectorIfElementIsVisible = (selector: string, cl
 
 
 export const toggleClassNameOfSelectorIfElementIsVisibleByScroll = (containerScrollable: Element, selector: string, classNameToToggle: string) => {
-  containerScrollable.addEventListener('scroll', () => toggleClassNameOfSelectorIfElementIsVisible(selector, classNameToToggle));
+  containerScrollable.addEventListener('scroll', () => toggleClassNameOfSelectorIfElementIsVisible(containerScrollable, selector, classNameToToggle));
 }

@@ -1,0 +1,11 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@import "../abstracts/extends";
+
+.page-loader {
+  @apply w-full h-screen fixed top-0 left-0 z-50 overflow-hidden flex items-center justify-center;
+  @include mixins.applyTheme {
+    background: functions.themed(mixins.$theme-map, "secondary-color");
+  }
+}

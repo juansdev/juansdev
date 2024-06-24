@@ -1,0 +1,18 @@
+@use "../abstracts/functions";
+@use "../abstracts/variables";
+
+%transition-all-1\.5s {
+  transition: all 1.5s;
+}
+
+%transition-\.5s {
+  transition: .5s;
+}
+
+%ellipse {
+  @apply absolute top-0 right-0 -z-10;
+  border-radius: 250px;
+  filter: blur(250px);
+  width: 340px;
+  height: 340px;
+}
