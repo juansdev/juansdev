@@ -1,5 +1,8 @@
-import {ReactNode} from "react";
+import {ICallbackLayout} from "@/presentation/views/core/interfaces";
+import {ICallbackResumeView} from "@/presentation/views/resume/interfaces";
 
 export interface IResumeApplication {
-  getResume(): ReactNode;
+  getRoot(): ICallbackLayout;
+
+  getResume(): ICallbackResumeView;
 }

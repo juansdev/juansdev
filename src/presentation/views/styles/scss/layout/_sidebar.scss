@@ -23,7 +23,9 @@
     }
 
     > h1 {
-      @apply fade-up text-center text-3xl font-bold pt-3.5 pr-0 pb-1 pl-0;
+      @apply fade-up text-center font-bold pt-3.5 pr-0 pb-1 pl-0;
+      font-size: 32px;
+      line-height: normal;
 
       > span {
         @apply font-normal ml-2;
@@ -32,6 +34,8 @@
 
     > h2 {
       @apply text-center font-medium fade-up;
+      font-size: 16px;
+      line-height: 20px;
       @include mixins.applyTheme {
         color: functions.themed(mixins.$theme-map, "third-color")
       }
@@ -42,6 +46,7 @@
 
       > a {
         @apply w-10 h-10 flex items-center justify-center;
+        @extend %transition-\.5s;
         border-radius: 50%;
         @include mixins.applyTheme {
           background-color: functions.themed(mixins.$theme-map, "secondary-color")

@@ -1,6 +1,10 @@
 @use "../abstracts/functions";
 @use "../abstracts/variables";
 
+%transition-all-\.35s {
+  transition: all .35s;
+}
+
 %transition-all-1\.5s {
   transition: all 1.5s;
 }

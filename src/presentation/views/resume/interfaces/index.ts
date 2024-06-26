@@ -1,0 +1,1 @@
+export type {ICallbackResumeViewProps, ICallbackResumeView, IResumeView} from "./resume.presentation.interface";

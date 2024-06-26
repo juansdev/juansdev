@@ -4,9 +4,10 @@
 
 .sidebar {
   @media(variables.$media-query-max-width-1199) {
-    @apply fixed top-0 h-full z-50;
-    width: 250px;
+    @apply fixed top-0 h-full z-50 #{!important};
+    width: 250px !important;
     transition: left 0.3s ease;
+    left: -250px;
     &.show {
       @apply left-0;
     }

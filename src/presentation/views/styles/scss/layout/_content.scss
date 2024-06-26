@@ -17,7 +17,7 @@ main {
       padding-right: variables.$gutter-x * .5;
       padding-left: variables.$gutter-x * .5;
 
-      > div.main-content {
+      div.page-resume {
         @apply h-screen overflow-x-auto w-full float-right pr-5 pt-0 pb-0;
         padding-left: 60px;
         max-width: 1040px;

@@ -16,35 +16,39 @@
 
 .section-home {
   @apply overflow-hidden;
-  padding-top: 60px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 140px;
 
   > div {
     @apply flex flex-wrap row;
     > .home-resume {
       @apply col-xxl-6 col-lg-6;
       > h2 {
-        @apply zoom-in text-8xl font-bold;
+        @apply zoom-in text-8xl font-bold mr-0.5 flex flex-wrap gap-x-3 justify-center;
         @include mixins.applyTheme {
           color: functions.themed(mixins.$theme-map, "base-color");
         }
         line-height: 120px;
 
         > span {
-          @apply font-normal ml-2;
+          @apply font-normal w-auto;
         }
       }
 
       > h3 {
-        @apply text-2xl font-medium py-5 px-0;
+        @apply font-medium py-5 px-0;
+        font-size: 24px;
+        line-height: 36px;
         @include mixins.applyTheme {
           color: functions.themed(mixins.$theme-map, "fourth-color");
         }
       }
 
       p {
-        @apply fade-down leading-8 font-medium max-w-96;
+        @apply fade-down font-medium;
         font-size: 20px;
+        line-height: 30px;
+        max-width: 390px;
         @include mixins.applyTheme {
           color: functions.themed(mixins.$theme-map, "third-color");
         }
@@ -52,34 +56,6 @@
 
       > div {
         @apply fade-down flex items-center gap-4 mt-10;
-        > .wrapper {
-          > a {
-            @apply flex justify-center items-center h-16 text-center font-medium relative overflow-hidden transition-all z-10 py-4 px-8;
-            font-size: 20px;
-            border-radius: 32px;
-            @include mixins.applyTheme {
-              color: functions.themed(mixins.$theme-map, "secondary-color");
-              background: functions.themed(mixins.$theme-map, "bg-scroll-primary-color");
-            }
-
-            &:after {
-              transition-delay: .2s;
-            }
-
-            &:before, &:after {
-              @apply absolute w-full h-full -top-full left-0 -z-10 transition-all;
-              @include mixins.applyTheme {
-                color: functions.themed(mixins.$theme-map, "fourth-color");
-              }
-            }
-
-            &.home-btn-contact {
-              @include mixins.applyTheme {
-                background: functions.themed(mixins.$theme-map, "bg-third-color");
-              }
-            }
-          }
-        }
       }
     }
 
@@ -95,7 +71,7 @@
 
       .profile-img {
         @apply zoom-in max-w-full;
-        padding-top: 50px;
+        padding-top: 60px;
       }
     }
   }

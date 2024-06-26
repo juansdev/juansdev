@@ -69,6 +69,19 @@
         > p {
           @apply max-w-full #{!important};
         }
+
+        > div {
+          @apply justify-center #{!important};
+          gap: 15px !important;
+        }
+      }
+
+      > .home-profile {
+        gap: 30px 0 !important;
+
+        > .profile-img {
+          @apply mx-auto;
+        }
       }
     }
   }
@@ -95,15 +108,24 @@
       }
     }
   }
-  @media (variables.$media-query-min-width-992) and (variables.$media-query-max-width-1399) {
+  @media (variables.$media-query-min-width-992) and (variables.$media-query-max-width-767) {
     padding: 60px 0 120px 0 !important;
   }
-  @media (variables.$media-query-min-width-1400) {
+  @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-1399) {
     > div {
       > .home-resume {
         > h2 {
           font-size: 80px !important;
           line-height: 90px !important;
+        }
+      }
+    }
+  }
+  @media (variables.$media-query-min-width-992) {
+    > div {
+      > .home-resume {
+        > h2 {
+          @apply justify-start #{!important};
         }
       }
     }

@@ -1,11 +1,12 @@
 import {IBaseLayout, ICallbackLayoutProps} from "@/presentation/views/core/interfaces";
+import React from "react";
 
-export class BaseLayout implements IBaseLayout {
-  getReactNode = ({children}: ICallbackLayoutProps) => <>{children}</>;
+export class BaseLayout extends React.Component<ICallbackLayoutProps> implements IBaseLayout {
+  constructor(props: ICallbackLayoutProps) {
+    super(props);
+  }
 
-  layout = () => {
-    return (props: ICallbackLayoutProps) => {
-      return this.getReactNode(props);
-    };
+  public render() {
+    return <>{this.props.children}</>;
   }
 }

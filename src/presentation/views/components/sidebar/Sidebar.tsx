@@ -2,65 +2,90 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  toggleClassNameOfSelectorIfElementIsVisible,
-  toggleClassNameOfSelectorIfElementIsVisibleByScroll
-} from "@/presentation/views/helpers";
-import {useEffect} from "react";
+import {mutationObserver, ScrollableContainer} from "@/presentation/views/helpers";
+import React, {createRef, RefObject} from "react";
 import {MenuSidebar} from "@/presentation/views/components";
 import {IMenuSidebarItems} from "@/presentation/views/components/sidebar/MenuSidebar";
+import {CustomView} from "@/presentation/views/interfaces/view.presentation.interface";
 
-export const Sidebar = () => {
-  const menuItems: IMenuSidebarItems = {
-    "Home": {
-      href: "#home",
-      pathImage: "/images/svg/home-svg.svg",
-      altImage: "Icon of Home",
-      isSelected: true
-    },
-    "About": {
-      href: "#about",
-      pathImage: "/images/svg/about-svg.svg",
-      altImage: "Icon of About"
-    },
-    "Resume": {
-      href: "#resume",
-      pathImage: "/images/svg/resume-svg.svg",
-      altImage: "Icon of Resume"
-    },
-    "Services": {
-      href: "#services",
-      pathImage: "/images/svg/services-svg.svg",
-      altImage: "Icon of Services"
-    },
-    "Portfolio": {
-      href: "#portfolio",
-      pathImage: "/images/svg/portfolio-svg.svg",
-      altImage: "Icon of Portfolio"
-    },
-    "Pricing": {
-      href: "#pricing",
-      pathImage: "/images/svg/pricing-svg.svg",
-      altImage: "Icon of Pricing"
-    },
-    "Blog": {
-      href: "#blog",
-      pathImage: "/images/svg/blog-svg.svg",
-      altImage: "Icon of Blog"
-    },
-    "Contact": {
-      href: "#contact",
-      pathImage: "/images/svg/contact-svg.svg",
-      altImage: "Icon of Contact"
+const menuItems: IMenuSidebarItems = {
+  "Home": {
+    href: "#home",
+    pathImage: "/images/svg/home-svg.svg",
+    altImage: "Icon of Home",
+    isSelected: true
+  },
+  "About": {
+    href: "#about",
+    pathImage: "/images/svg/about-svg.svg",
+    altImage: "Icon of About"
+  },
+  "Resume": {
+    href: "#resume",
+    pathImage: "/images/svg/resume-svg.svg",
+    altImage: "Icon of Resume"
+  },
+  "Services": {
+    href: "#services",
+    pathImage: "/images/svg/services-svg.svg",
+    altImage: "Icon of Services"
+  },
+  "Portfolio": {
+    href: "#portfolio",
+    pathImage: "/images/svg/portfolio-svg.svg",
+    altImage: "Icon of Portfolio"
+  },
+  "Pricing": {
+    href: "#pricing",
+    pathImage: "/images/svg/pricing-svg.svg",
+    altImage: "Icon of Pricing"
+  },
+  "Blog": {
+    href: "#blog",
+    pathImage: "/images/svg/blog-svg.svg",
+    altImage: "Icon of Blog"
+  },
+  "Contact": {
+    href: "#contact",
+    pathImage: "/images/svg/contact-svg.svg",
+    altImage: "Icon of Contact"
+  }
+}
+
+export class Sidebar extends CustomView {
+  static baseRef: RefObject<HTMLDivElement>;
+  static scrollableContainer: ScrollableContainer;
+
+  constructor(props: any) {
+    super(props);
+    Sidebar.baseRef = createRef<HTMLDivElement>();
+  }
+
+  componentDidMount() {
+    if (Sidebar.baseRef.current) {
+      const observer = mutationObserver(
+        Sidebar.baseRef.current,
+        ["class"],
+        (mutation: MutationRecord) =>
+          Sidebar.scrollableContainer = new ScrollableContainer(
+            Sidebar.baseRef.current!,
+            ".element-to-modify-by-scroll",
+            "show",
+            (mutation.target as HTMLElement).classList.contains("show")
+          )
+      );
+      Sidebar.scrollableContainer = new ScrollableContainer(
+        Sidebar.baseRef.current,
+        ".element-to-modify-by-scroll",
+        "show",
+        Sidebar.baseRef.current.classList.contains("show")
+      );
+      return () => observer.disconnect();
     }
   }
-  useEffect(() => {
-    const containerScrollable = document.getElementsByClassName("sidebar")[0];
-    toggleClassNameOfSelectorIfElementIsVisible(containerScrollable, ".element-to-modify-by-scroll", "show");
-    toggleClassNameOfSelectorIfElementIsVisibleByScroll(containerScrollable, ".element-to-modify-by-scroll", "show");
-  }, []);
-  return (
-    <div className={"sidebar show"}>
+
+  render = () => (
+    <div ref={Sidebar.baseRef} className={"sidebar"}>
       <div className={"profile-img-main"}>
         <Image className={"element-to-modify-by-scroll"} src={"/images/profile-img.webp"} alt={"Image of Profile"}
                width={210} height={180}/>

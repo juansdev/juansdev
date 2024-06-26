@@ -3,11 +3,16 @@
 import {ReactNode} from "react";
 import {useDependencyContext} from "@/app/providers";
 import {ICallbackLayoutProps} from "@/presentation/views/core/interfaces";
+import {ICallbackResumeViewProps} from "@/presentation/views/resume/interfaces";
 
-export const Home = (): ReactNode => {
+interface IResumeViewProps {
+  props: ICallbackResumeViewProps;
+}
+
+export const Home = ({props}: IResumeViewProps): ReactNode => {
   const {resumeApplication} = useDependencyContext();
   const view = resumeApplication.getResume();
-  if (view) return view;
+  if (view) return view(props);
 }
 
 interface IRootProps {

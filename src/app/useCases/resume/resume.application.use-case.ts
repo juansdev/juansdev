@@ -1,12 +1,12 @@
 import {IResumeApplication} from "@/app/interfaces/useCases";
-import {ReactNode} from "react";
-import {ICallbackLayout, ILayout, IView} from "@/presentation/views/core/interfaces";
+import {ICallbackLayout, ILayout} from "@/presentation/views/core/interfaces";
+import {ICallbackResumeView, IResumeView} from "@/presentation/views/resume/interfaces";
 
 export class ResumeApplication implements IResumeApplication {
   private readonly _rootResume: ILayout;
-  private readonly _viewResume: IView;
+  private readonly _viewResume: IResumeView;
 
-  constructor(viewResume: IView, rootResume: ILayout) {
+  constructor(viewResume: IResumeView, rootResume: ILayout) {
     this._viewResume = viewResume;
     this._rootResume = rootResume;
   }
@@ -15,7 +15,7 @@ export class ResumeApplication implements IResumeApplication {
     return this._rootResume();
   }
 
-  getResume(): ReactNode {
+  getResume(): ICallbackResumeView {
     return this._viewResume();
   }
 }

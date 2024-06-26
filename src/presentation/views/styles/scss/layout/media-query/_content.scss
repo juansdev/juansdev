@@ -2,9 +2,17 @@
 @use "../../abstracts/functions";
 @use "../../abstracts/variables";
 
-div.main-content {
+div.fix-bg {
+  @media(variables.$media-query-max-width-767) {
+    @include mixins.applyTheme {
+      background: functions.themed(mixins.$theme-map, "secondary-color") !important;
+    }
+  }
+}
+
+div.page-resume {
   @media(variables.$media-query-max-width-575) {
-    @apply overflow-hidden #{!important};
+    @apply overflow-x-hidden #{!important};
     padding: 0 10px !important;
   }
   @media(variables.$media-query-max-width-1199) {

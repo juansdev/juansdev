@@ -127,9 +127,15 @@ ul.menu {
 // - Sidebar
 ul.menu-list-main {
   > li {
-    @apply px-5 py-2.5 border-t-2 border-solid;
+    @apply px-5 py-2.5;
     @include mixins.applyTheme {
-      border-top-color: functions.themed(mixins.$theme-map, "border-primary-color")
+      border-top: 1px solid functions.themed(mixins.$theme-map, "border-primary-color");
+    }
+
+    &:last-child {
+      @include mixins.applyTheme {
+        border-bottom: 1px solid functions.themed(mixins.$theme-map, "border-primary-color");
+      }
     }
 
     > a {
@@ -209,6 +215,64 @@ div.wrap {
       &.title-hover {
         @apply left-20 opacity-0 absolute top-4 text-center m-0;
         @extend %transition-\.5s;
+      }
+    }
+  }
+}
+
+// * Botones Custom (View Work, Contact Me)
+.wrapper {
+  > a {
+    @apply flex justify-center items-center text-center font-medium relative overflow-hidden;
+    height: 60px;
+    border-radius: 32px;
+    font-size: 20px;
+    padding: 16px 30px;
+    line-height: 60px;
+    z-index: 1;
+    @extend %transition-all-\.35s;
+    @include mixins.applyTheme {
+      color: functions.themed(mixins.$theme-map, "secondary-color");
+      background: functions.themed(mixins.$theme-map, "bg-scroll-primary-color");
+    }
+
+    &:after {
+      @apply absolute w-full h-full -top-full left-0;
+      content: "";
+      @include mixins.applyTheme {
+        background: functions.themed(mixins.$theme-map, "fourth-color");
+      }
+      z-index: -1;
+      @extend %transition-all-\.35s;
+    }
+
+    &:before {
+      @apply absolute w-full h-full -top-full left-0;
+      content: "";
+      @include mixins.applyTheme {
+        background: functions.themed(mixins.$theme-map, "fourth-color");
+      }
+      z-index: -1;
+      @extend %transition-all-\.35s;
+    }
+
+    &.home-btn-contact {
+      @include mixins.applyTheme {
+        background: functions.themed(mixins.$theme-map, "bg-third-color");
+      }
+    }
+
+    &:hover {
+      &:after {
+        @apply top-0;
+      }
+
+      &:before {
+        @apply top-0;
+      }
+
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "base-color");
       }
     }
   }

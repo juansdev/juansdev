@@ -5,5 +5,5 @@ export interface IView {
 }
 
 export interface IBaseView {
-  "view": () => ReactNode;
+  "render": () => ReactNode;
 }

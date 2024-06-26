@@ -1,5 +1,5 @@
 import {Home} from "@/presentation/router";
 
 export default function HomePage() {
-  return <Home/>
+  return <Home props={{}}/>
 }
