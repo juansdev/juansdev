@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "serve": "next dev -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "scss": "sass src/presentation/views/styles/scss:src/presentation/views/styles/css"
   },

@@ -52,9 +52,9 @@ export const ResumeHome = () => {
           </div>
         </div>
         <div className="home-profile">
-          <Image className={"flower"} width={37} height={37} src={"/images/flower.png"} alt={"flower"}/>
+          <Image className={"flower"} width={37} height={37} src={"/images/flower.webp"} alt={"flower"}/>
           <Image className={"profile-img element-to-modify-by-scroll"} width={478} height={478}
-                 src={"https://up2client.com/envato/biogi/resume/assets/images/jessica-main-img.png"}
+                 src={"/images/juan-serrano-main-img.webp"}
                  alt={"Juan Serrano - Profile"}/>
         </div>
       </div>
