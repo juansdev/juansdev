@@ -1,0 +1,73 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@import "../abstracts/extends";
+@import "./media-query/worked-box";
+
+.worked-box {
+  @apply p-5 w-full absolute bottom-0 left-1/2;
+  max-width: 330px;
+  box-shadow: 0 40px 40px -25px rgba(19, 31, 47, 0.60);
+  border-radius: 15px;
+  transform: translate(-50%, 50%);
+  @include mixins.applyTheme {
+    background: functions.themed(mixins.$theme-map, "bg-primary-color");
+  }
+
+  > p {
+    padding-bottom: 15px;
+    line-height: normal;
+    font-size: 20px;
+    @include mixins.applyTheme {
+      color: functions.themed(mixins.$theme-map, "base-color");
+    }
+  }
+
+  > div {
+    @apply flex items-center justify-between relative;
+    > img {
+      @apply cursor-pointer;
+      border-radius: 50%;
+
+      &.client-img1 {
+        @apply relative;
+      }
+
+      &.client-img2 {
+        @apply absolute;
+        left: 30px;
+      }
+
+      &.client-img3 {
+        @apply absolute;
+        left: 60px;
+      }
+
+      &.client-img4 {
+        @apply absolute;
+        left: 90px;
+      }
+    }
+
+    > p {
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "base-color");
+      }
+      line-height: normal;
+      font-size: 16px;
+      max-width: 60px;
+
+      &:before {
+        @apply block h-0.5 absolute;
+        content: "";
+        top: 22px;
+        right: 90px;
+        width: 50px;
+        @include mixins.applyTheme {
+          background-color: functions.themed(mixins.$theme-map, "base-color");
+        }
+      }
+    }
+  }
+}

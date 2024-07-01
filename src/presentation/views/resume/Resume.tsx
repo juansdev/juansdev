@@ -3,6 +3,7 @@ import {ResumeHome} from "@/presentation/views/resume/components";
 import {ScrollableContainer} from "@/presentation/views/helpers";
 import {ICallbackResumeViewProps, IResumeView} from "@/presentation/views/resume/interfaces";
 import {CustomView} from "@/presentation/views/interfaces/view.presentation.interface";
+import {AssociateBrands} from "@/presentation/views/components/brands/AssociateBrands";
 
 class ResumeView extends CustomView {
   public static baseRef: RefObject<HTMLDivElement>;
@@ -26,6 +27,7 @@ class ResumeView extends CustomView {
     return (
       <div ref={ResumeView.baseRef} className={"page-resume show"}>
         <ResumeHome/>
+        <AssociateBrands/>
       </div>
     );
   }

@@ -1,0 +1,22 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/functions";
+@use "../../abstracts/variables";
+
+.worked-box {
+  @media (variables.$media-query-max-width-500) {
+    @apply my-5 mx-auto;
+    max-width: 330px !important;
+    position: unset !important;;
+    transform: translate(0) !important;;
+  }
+  @media(variables.$media-query-max-width-767) {
+    > p {
+      font-size: 18px !important;
+    }
+    > div {
+      > p {
+        font-size: 18px !important;
+      }
+    }
+  }
+}

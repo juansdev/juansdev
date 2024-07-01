@@ -6,7 +6,7 @@
 .section-home {
   @media (variables.$media-query-max-width-500) {
     padding: 50px 0 0 0 !important;
-    > div {
+    > .section-one {
       > .home-resume {
         > h2 {
           font-size: 47px !important;
@@ -30,7 +30,7 @@
     }
   }
   @media(variables.$media-query-max-width-767) {
-    > div {
+    > .section-one {
       > .home-resume {
         > p {
           font-size: 18px !important;
@@ -45,7 +45,7 @@
     }
   }
   @media (variables.$media-query-min-width-501) and (variables.$media-query-max-width-767) {
-    > div {
+    > .section-one {
       > .home-resume {
         > h2 {
           font-size: 60px !important;
@@ -61,7 +61,7 @@
     }
   }
   @media (variables.$media-query-max-width-991) {
-    > div {
+    > .section-one {
       @apply text-center #{!important};
       gap: 30px 0 !important;
 
@@ -87,7 +87,7 @@
   }
   @media (variables.$media-query-min-width-501) and (variables.$media-query-max-width-991) {
     padding: 50px 0 110px 0 !important;
-    > div {
+    > .section-one {
       > .home-resume {
         > div {
           @apply justify-center;
@@ -98,7 +98,7 @@
     }
   }
   @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-991) {
-    > div {
+    > .section-one {
       > .home-resume {
         > h3 {
           padding: 15px 0 !important;
@@ -112,7 +112,7 @@
     padding: 60px 0 120px 0 !important;
   }
   @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-1399) {
-    > div {
+    > .section-one {
       > .home-resume {
         > h2 {
           font-size: 80px !important;
@@ -122,7 +122,7 @@
     }
   }
   @media (variables.$media-query-min-width-992) {
-    > div {
+    > .section-one {
       > .home-resume {
         > h2 {
           @apply justify-start #{!important};

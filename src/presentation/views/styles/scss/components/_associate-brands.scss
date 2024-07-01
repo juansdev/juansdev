@@ -1,0 +1,47 @@
+//Abstracts
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+@import "../abstracts/extends";
+@import "./media-query/associate-brands";
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.associate-brands {
+  @apply overflow-hidden;
+  > h3 {
+    @apply fade-up font-light;
+    font-size: 24px;
+    line-height: 32px;
+    @include mixins.applyTheme {
+      color: functions.themed(mixins.$theme-map, "base-color");
+    }
+  }
+
+  .logos {
+    @apply overflow-hidden whitespace-nowrap relative flex;
+    > .logos-slide {
+      animation: 40s slide infinite linear;
+
+      > .marquee-content {
+        @apply flex justify-around min-w-full items-center pt-5;
+        > div {
+          @apply mx-2.5 cursor-pointer h-20 flex items-center justify-center;
+          border-radius: 40px;
+          width: 220px;
+          padding: 0 52px;
+          @include mixins.applyTheme {
+            border: 1px solid functions.themed(mixins.$theme-map, "border-secondary-color");
+          }
+        }
+      }
+    }
+  }
+}

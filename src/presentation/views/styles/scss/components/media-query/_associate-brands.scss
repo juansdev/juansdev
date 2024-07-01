@@ -1,0 +1,29 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/functions";
+@use "../../abstracts/variables";
+
+.associate-brands {
+  @media (variables.$media-query-max-width-767) {
+    @apply mt-4;
+  }
+
+  .marquee-content > div {
+    @media (variables.$media-query-max-width-767) {
+      padding: 0 40px !important;
+      width: 200px !important;
+      height: 65px !important;
+    }
+    @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-991) {
+      @apply h-10;
+      padding: 0 40px !important;
+      width: 200px !important;
+    }
+  }
+
+  > h3 {
+    @media (variables.$media-query-max-width-991) {
+      @apply text-center;
+      font-size: 22px !important;
+    }
+  }
+}

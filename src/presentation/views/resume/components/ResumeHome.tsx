@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {useEffect, useRef} from "react";
+import {WorkedBox} from "@/presentation/views/components/box/WorkedBox";
 
 const listTitleJob = ["Full stack Developer", "Back-End Web Developer"];
 
@@ -27,7 +28,7 @@ export const ResumeHome = () => {
 
   return (
     <section className={"section-home"}>
-      <div className={"show"}>
+      <div className={"section-one show"}>
         <div className={"home-resume"}>
           <h2 className={"element-to-modify-by-scroll"}>
             Juan
@@ -56,6 +57,7 @@ export const ResumeHome = () => {
           <Image className={"profile-img element-to-modify-by-scroll"} width={478} height={478}
                  src={"/images/juan-serrano-main-img.webp"}
                  alt={"Juan Serrano - Profile"}/>
+          <WorkedBox/>
         </div>
       </div>
     </section>
