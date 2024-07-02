@@ -4,9 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {mutationObserver, ScrollableContainer} from "@/presentation/views/helpers";
 import React, {createRef, RefObject} from "react";
-import {MenuSidebar} from "@/presentation/views/components";
-import {IMenuSidebarItems} from "@/presentation/views/components/sidebar/MenuSidebar";
-import {CustomView} from "@/presentation/views/interfaces/view.presentation.interface";
+import {IMenuSidebarItems, MenuSidebar} from "@/presentation/views/components";
+import {CustomView} from "@/presentation/views/abstract";
 
 const menuItems: IMenuSidebarItems = {
   "Home": {

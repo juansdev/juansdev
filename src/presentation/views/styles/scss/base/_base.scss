@@ -71,3 +71,12 @@
 .none {
   @apply hidden #{!important};
 }
+
+.section-heading-text {
+  @apply flex relative items-center font-bold;
+  font-size: 48px;
+  line-height: 64px;
+  @include mixins.applyTheme {
+    color: functions.themed(mixins.$theme-map, "base-color");
+  }
+}

@@ -3,10 +3,8 @@
 import "@/presentation/views/styles/css/main.css";
 import {BaseLayout} from "@/presentation/views/core";
 import {DependencyProviderApplicationProviders} from "@/app/providers";
-import {Ellipse, Sidebar} from "@/presentation/views/components";
+import {Ellipse, Loading, MenuToggle, Sidebar} from "@/presentation/views/components";
 import {dm_sans} from "@/presentation/views/fonts";
-import {Loading} from "@/presentation/views/components/Loading";
-import {MenuToggle} from "@/presentation/views/components/buttons/MenuToggle";
 import {ICallbackLayoutProps, ILayout} from "@/presentation/views/core/interfaces";
 
 class RootLayout extends BaseLayout {

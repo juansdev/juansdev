@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {IMenuItems, Menu} from "@/presentation/views/components/header/Menu";
+import {IMenuItems, Menu} from "@/presentation/views/components";
 
 export const Header = () => {
   const menuItems: IMenuItems = {

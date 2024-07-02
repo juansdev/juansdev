@@ -1,1 +1,0 @@
-export type {ICustomView} from "./view.presentation.interface";

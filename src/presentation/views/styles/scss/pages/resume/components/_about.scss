@@ -2,3 +2,74 @@
 @use "../../../abstracts/functions";
 @use "../../../abstracts/mixins";
 @use "../../../abstracts/variables";
+@import "./media-query/about";
+
+.about-section {
+  @apply py-20 px-0;
+  > .heading-container {
+    @apply flex items-baseline;
+    gap: 15px;
+
+    > h2 {
+      @apply section-heading-text;
+    }
+
+    > div {
+      @apply flex-grow h-0.5 mix-blend-hard-light;
+      @include mixins.applyTheme {
+        background: functions.themed(mixins.$theme-map, "bg-fourth-color");
+      }
+    }
+  }
+
+  > .section-sub-text {
+    @apply pt-10 px-0 font-normal;
+    padding-bottom: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    @include mixins.applyTheme {
+      color: functions.themed(mixins.$theme-map, "third-color");
+    }
+
+    > span {
+      @apply mx-1.5;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "base-color");
+      }
+    }
+  }
+
+  > .about-detail-main {
+    @apply flex items-center pb-2.5;
+    > .about-detail {
+      @apply font-normal w-full;
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 200px;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "third-color");
+      }
+    }
+
+    > .about-detail-info {
+      @apply font-medium;
+      font-size: 20px;
+      line-height: 30px;
+      @include mixins.applyTheme {
+        color: functions.themed(mixins.$theme-map, "base-color");
+      }
+
+      &.email {
+        @apply cursor-pointer;
+      }
+
+      &:before {
+        @include mixins.applyTheme {
+          color: functions.themed(mixins.$theme-map, "third-color");
+        }
+        margin-right: 30px;
+        content: ":";
+      }
+    }
+  }
+}

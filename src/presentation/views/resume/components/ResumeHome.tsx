@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {useEffect, useRef} from "react";
-import {WorkedBox} from "@/presentation/views/components/box/WorkedBox";
+import {WorkedBox} from "@/presentation/views/components";
 
 const listTitleJob = ["Full stack Developer", "Back-End Web Developer"];
 

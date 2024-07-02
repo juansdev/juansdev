@@ -2,3 +2,48 @@
 @use "../../../../abstracts/functions";
 @use "../../../../abstracts/mixins";
 @use "../../../../abstracts/variables";
+
+.about-section {
+  @media (variables.$media-query-max-width-500) {
+    @apply py-5 px-0 #{!important};
+  }
+  @media (variables.$media-query-min-width-501) and (variables.$media-query-max-width-767) {
+    padding: 30px 0 !important;
+  }
+  @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-991) {
+    @apply py-10 px-0 #{!important};
+  }
+  @media (variables.$media-query-min-width-992) and (variables.$media-query-max-width-1399) {
+    padding: 50px 0 !important;
+  }
+
+  > .section-sub-text {
+    @media (variables.$media-query-max-width-767) {
+      padding: 15px 0 15px 0 !important;
+      font-size: 18px !important;
+    }
+    @media (variables.$media-query-min-width-768) and (variables.$media-query-max-width-1399) {
+      padding: 20px 0 20px 0 !important;
+    }
+  }
+
+  > .about-detail-main {
+    > .about-detail {
+      @media (variables.$media-query-max-width-500) {
+        max-width: 100px !important;
+      }
+      @media (variables.$media-query-min-width-501) and (variables.$media-query-max-width-767) {
+        font-size: 18px !important;
+        line-height: 26px !important;
+        max-width: 130px !important;
+      }
+    }
+
+    > .about-detail-info {
+      @media (variables.$media-query-max-width-767) {
+        font-size: 18px !important;
+        line-height: 26px !important;
+      }
+    }
+  }
+}

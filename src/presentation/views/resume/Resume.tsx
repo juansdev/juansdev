@@ -1,9 +1,9 @@
 import React, {createRef, RefObject} from "react";
-import {ResumeHome} from "@/presentation/views/resume/components";
+import {ResumeAbout, ResumeHome} from "@/presentation/views/resume/components";
 import {ScrollableContainer} from "@/presentation/views/helpers";
 import {ICallbackResumeViewProps, IResumeView} from "@/presentation/views/resume/interfaces";
-import {CustomView} from "@/presentation/views/interfaces/view.presentation.interface";
-import {AssociateBrands} from "@/presentation/views/components/brands/AssociateBrands";
+import {AssociateBrands} from "@/presentation/views/components";
+import {CustomView} from "@/presentation/views/abstract";
 
 class ResumeView extends CustomView {
   public static baseRef: RefObject<HTMLDivElement>;
@@ -28,6 +28,7 @@ class ResumeView extends CustomView {
       <div ref={ResumeView.baseRef} className={"page-resume show"}>
         <ResumeHome/>
         <AssociateBrands/>
+        <ResumeAbout/>
       </div>
     );
   }
